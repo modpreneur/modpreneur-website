@@ -14,12 +14,6 @@
     <link rel="stylesheet" href="css/style.css">
     <!--<link rel="stylesheet" href="css/meicons.css">-->
 
-    <!--Parallax function-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/parallax/parallax.min.js"></script>
-    <script type="text/javascript" src="js/smoothscroll.js"></script>
-<!--    <script type="text/javascript" src="js/menu.js"></script>-->
-
     <title>Moderní podnikatel</title>
 </head>
 
@@ -28,36 +22,39 @@
 
     <div id="intro" class="section">
 
-        <div class="parallax-window" data-image-naturalHeight="900px" data-parallax="scroll" data-image-src="img/header.jpg">
-        </div>
+        <div class="head-content">
+            <object data="img/logo.svg" width="180px" height="50px" type="image/svg+xml" class="logo">
+                <img src="img/logo.png" />
+            </object>
 
-        <img src="img/logo.png" class="logo" alt="Moderní podnikatel">
-
-        <div class="row span-mini-24">
             <menu id="nav">
                 <div class="dropdown-main">
                     <label for="show-menu" class="show-drop">
                     </label>
                     <input type="checkbox" id="show-menu" role="button">
                     <ul id="dropdown" class="drop">
-                        <li><a href="#intro" class="smoothScroll">Úvod</a></li>
-                        <li><a href="#products" class="smoothScroll">Naše produkty</a></li>
-                        <li><a href="#career" class="smoothScroll">Kariéra</a></li>
-                        <li><a href="#contact" class="smoothScroll">Kontakty</a></li>
+                        <li><a href="#intro" class="active">Úvod</a></li>
+                        <li><a href="#products">Naše produkty</a></li>
+                        <li><a href="#career">Kariéra</a></li>
+                        <li><a href="#contact">Kontakty</a></li>
                     </ul>
                 </div>
             </menu>
         </div>
-
+        <div class="bg-scrollMenu"></div>
+<!--        <div class="parallax-window" data-image-naturalHeight="900px" data-parallax="scroll" data-image-src="img/header.jpg">
+        </div>-->
         <div class="content">
             <div class="span-mini-24">
                 <h1>Vyladěná řešení pro podnikatele</h1>
                 <h3>Moderní řešení pramení z kvalitních produktů, na které se můžete spolehnout.<br>
                     Přejděte od snů k vytoužené cestě za růstem byznysu.</h3>
-                <div class="span-mini-14 offset-mini-5">
-                    <a href="#products" class="smoothScroll"><button class="button">zjisti více</button></a>
+                <div class="span-medium-24">
+                    <a href="#products" class="smoothScroll span-mini-18 offset-mini-3">
+                        <button class="button">zjisti více</button>
+                    </a>
                 </div>
-             </div>
+            </div>
         </div>
 
         <div class="scroll">
@@ -70,41 +67,35 @@
     <div id="products" class="section">
 
         <div class="content">
-            <div class="span-mini-24">
+            <div class="span-mini-24 span-xlarge-16 offset-large-4">
 
                 <h1>Záleží nám na produktech</h1>
                 <span class="line"></span>
-                <h3>Vyšperkovaná řešení pro podnikání, která zazáří
+                <h2>Vyšperkovaná řešení pro podnikání, která zazáří
                     mezi konkurencí. Objevte tajemství kouzel, která
                     zapůsobí na náročné publikum, které je hladové po inovacích.
-                </h3>
+                </h2>
 
                 <div class="product-items">
+
+                    <div class="span-none-padding-large-10">
                     <div class="row">
                         <span class="span-none-padding-mini-4">
                             <span class="me-necktie">
-                                <i class="path1"></i>
-                                <i class="path2"></i>
-                                <i class="path3"></i>
-                                <i class="path4"></i>
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                                <span class="path3"></span>
+                                <span class="path4"></span>
                             </span>
                         </span>
                         <span class="span-none-padding-mini-20">
                             <h2>Necktie</h2>
                             <h3>Správa produktů a všech zákazníků dokáže
-                                být oříškem. Rozlousknout problém a proměnit
+                                být oříškem. Rozlousknout problém a&nbsp;proměnit
                                 výsledek na jedničku umí Necktie dokonale.
                             </h3>
                         </span>
                     </div>
-
-                    <label for="show-menu" class="show-drop">
-                        <span class="circle color-red"></span>
-                    </label>
-                    <input type="checkbox" id="show-products" role="button">
-
-                <div id="hide-products" class="section">
-                    <div class="content">
 
                     <div class="row">
                         <span class="span-none-padding-mini-4">
@@ -115,9 +106,10 @@
                         </span>
                         <span class="span-none-padding-mini-20">
                             <h2>Elderedge</h2>
-                            <h3>Nastavit rovnováhu mezi produkty a
-                                zákazníkem chce trpělivost, znalosti
-                                a rozvahu. Eldredge zvládne všechno a rychle. Ani se nezapotí.
+                            <h3>Nastavit rovnováhu mezi produkty
+                                a&nbsp;zákazníkem chce trpělivost,
+                                znalosti a&nbsp;rozvahu. Eldredge
+                                zvládne všechno a&nbsp; rychle. Ani se nezapotí.
                             </h3>
                         </span>
                     </div>
@@ -133,12 +125,15 @@
                             <h2>Tiecons</h2>
                             <h3>Vítejte ve světě, kde pixely ztrácí
                                 svůj váznam. Weby připravené pro
-                                nekonečná rozlišení a podpora všech prohlížečů
-                                z doby kamenné.
+                                nekonečná rozlišení&nbsp;a podpora všech prohlížečů&nbsp;z doby kamenné.
                             </h3>
                         </span>
                     </div>
+                    </div>
 
+                    <div class="span-none-padding-xlarge-4"></div>
+
+                    <div class="span-none-padding-large-10">
                     <div class="row">
                         <span class="span-none-padding-mini-4">
                             <span class="me-ascot">
@@ -150,9 +145,9 @@
                         </span>
                         <span class="span-none-padding-mini-20">
                             <h2>Ascot</h2>
-                            <h3>Představte si nedělní pohodu s
-                                tabletem v ruce. S nápadem v
-                                hlavě a Ascotem nyní vytvoříte
+                            <h3>Představte si nedělní pohodu
+                                s&nbsp;tabletem v ruce.&nbsp;S&nbsp;nápadem
+                                v&nbsp;hlavě a&nbsp;Ascotem nyní vytvoříte
                                 mistrovská díla. Webová díla.
                             </h3>
                         </span>
@@ -185,19 +180,16 @@
                         <span class="span-none-padding-mini-20">
                             <h2>Trinity</h2>
                             <h3>Některé frameworky si zakládají na
-                                lenosti programátorů a chtějí zjednodušit
+                                lenosti programátorů a&nbsp;chtějí zjednodušit
                                 jejich práci. Trinity posouvá hranice mnohem dál.
                             </h3>
                         </span>
                     </div>
-
-                </div>
-            </div>
+                    </div>
 
                 </div>
             </div>
         </div>
-
 
         <div class="scroll">
             <a href="#career" class="smoothScroll">
@@ -207,27 +199,157 @@
     </div>
 
     <div id="career" class="section">
+        <div class="content">
+            <div class="span-mini-24 span-xlarge-16 offset-large-4">
+                <h1>Perfektní místo pro start kariéry</h1>
+                <div class="harmonica">
+                    <input type="radio" id="harmonica-01" name="list">
+                    <div class="main-panel">
+                        <label for="harmonica-01">Perfect JS Programátor <i class="me-down"></i></label>
+                        <div class="show-harmonica">
+                            Zkusili jste někdy kouzlit bez kouzelné hůlky,
+                            nebo se pohybovat v čase rychlosti světla? I
+                            slovy magie lze popsat práce těch nehlepších
+                            z oboru. Představte si vymazlený kód, který
+                            svou precizností předčí učebnicové příklady a
+                            hlavně výsledky, kterými se budete chlubit před
+                            přáteli.
+                        </div>
+                    </div>
 
-        <h1>Perfektní místo pro start kariéry</h1>
+                    <input type="radio" id="harmonica-02" name="list">
+                    <div class="main-panel">
+                        <label for="harmonica-02">SuperHero PHP Programátor <i class="me-down"></i></label>
+                        <div class="show-harmonica">
+                            Zkusili jste někdy kouzlit bez kouzelné hůlky,
+                            nebo se pohybovat v čase rychlosti světla? I
+                            slovy magie lze popsat práce těch nehlepších
+                            z oboru. Představte si vymazlený kód, který
+                            svou precizností předčí učebnicové příklady a
+                            hlavně výsledky, kterými se budete chlubit před
+                            přáteli.
+                        </div>
+                    </div>
 
+                    <input type="radio" id="harmonica-03" name="list" checked>
+                    <div class="main-panel">
+                        <label for="harmonica-03">Ninja CSS Kóder <span class="me-up"></span></label>
+                        <div class="show-harmonica">
+                            Zkusili jste někdy kouzlit bez kouzelné hůlky,
+                            nebo se pohybovat v čase rychlosti světla? I
+                            slovy magie lze popsat práce těch nehlepších
+                            z oboru. Představte si vymazlený kód, který
+                            svou precizností předčí učebnicové příklady a
+                            hlavně výsledky, kterými se budete chlubit před
+                            přáteli. Takové schopnosti potřebujeme pro naše
+                            projekty a rádi tyto zkušenosti předáme i méně
+                            pokročilým kouzelníkům s HTML a CSS kódem. Stačí nám napsat.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="scroll">
             <a href="#contact" class="smoothScroll">
                 <span class="me-scroll-down"></span>
             </a>
         </div>
+
     </div>
 
     <div id="contact" class="section">
+
+        <div class="span-mini-24 span-xlarge-16 offset-large-4">
+            <div class="content">
+                <h1>Jsme připraveni na spolupráci</h1>
+                <span class="line"></span>
+                <h3>Už jen jedna zpráva nás dělí od
+                    spolupráce. Jsme k zastižení v
+                    kanceláři, na emailu či telefonu.
+                    Jedeme nonstop online, protože byznys nikdy nespí.
+                </h3>
+
+                <div class="offset-mini-8">
+                    <div class="span-mini-4">
+                        <button class="button">Ostrava</button>
+                    </div>
+                    <div class="span-mini-4">
+                        <button class="button">Brno</button>
+                    </div>
+                </div>
+
+
+                <div class="span-mini-24 span-xlarge-3">
+                    <div class="span-mini-4 span-medium-8">
+                        <span class="me-map-icon">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                        <span class="path3"></span>
+                    </span>
+                    </div>
+                    <div class="span-mini-20 span-medium-16">
+                        <h3>Borivoj</h3>
+                        <h3>Borivoj</h3>
+                        <h3>Borivoj</h3>
+                    </div>
+                </div>
+                <div class="span-mini-24 span-xlarge-3">
+                    <div class="span-mini-4 span-medium-8">
+                        <span class="me-user">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                        </span>
+                    </div>
+                    <div class="span-mini-20 span-medium-16">
+                        <h3>Borivoj</h3>
+                        <h3>Borivoj</h3>
+                        <h3>Borivoj</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="scroll">
+            <a href="#maps" class="smoothScroll">
+                <span class="me-scroll-down"></span>
+            </a>
+        </div>
+    </div>
+
+    <div id="maps" class="section">
+
+        <div class="content">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4329.614821955478!2d18.26090964608554!3d49.81606456143781!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e35de386fc53%3A0xe8ee482e38266745!2zUG9ocmFuacSNbsOtIDUwNC8yNywgNzAzIDAwIE9zdHJhdmEtVsOtdGtvdmljZSwgxIxlc2vDoSByZXB1Ymxpa2E!5e0!3m2!1scs!2sus!4v1456602545798"
+                    width="100%" height="350px" frameborder="0" style="border:0; color:black;" allowfullscreen></iframe>
+        </div>
+
+       <!-- <footer>
+            <div class="relative">
+                <img src="img/msk_logo.png" alt="Moravskoslezským kraj">
+                <h3>Tento projekt je podporován Moravskoslezským krajem.</h3>
+                <h3>ModerniPodnikatel © All rights reserved 2015</h3>
+            </div>
+        </footer>-->
 
         <div class="scroll">
             <a href="#intro" class="smoothScroll">
                 <span class="me-up"></span>
             </a>
         </div>
-    </div>
 
     </div>
 
+    </div>
+    </div>
 </body>
+
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/menu.js"></script>
+<!--<script src="js/parallax/parallax.min.js"></script>-->
+<!--<script type="text/javascript" src="js/smoothscroll.js"></script>-->
+<!--    <script type="text/javascript" src="js/menu.js"></script>-->
+
 </html>

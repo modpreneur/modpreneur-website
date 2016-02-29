@@ -1,12 +1,3 @@
-body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-html, body{
-  height:100%;
-}
 
 a{
   color: #a4a4a4;
@@ -16,199 +7,219 @@ a{
   }
 }
 
-.logo{
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  height: 35px;
-  width: 135px;
-}
-
-#nav{
-  position: fixed;
-  top: 10px;
-  right: 35px;
-
-  margin:0;
-  padding:0;
-  text-align:center;
-  z-index: 999;
-  li {
-    display: block;
-    padding-right: 10px;
-    font-size: 16px;
-  }
-
-  label{
-    font-family: '';
-    display: block;
-    width: 45px;
-    height: 45px;
-    &:before {
-      line-height: 52px;
-      font-size: 60px;
-      content: "\2261";
-    }
-  }
-
-  ul#dropdown{
-    border-radius: 0;
-    background: lighten(#cecece,15%);
-    width: 140px;
-    li:hover,li:focus{
-      background: none;
-    }
-    .active{
-      a{
-        color: #6fbc00;
-        border-bottom: 1px solid #6fbc00;
-      }
-    }
-    a{
-      width: 130px;
-      margin-left: 10px;
-      border-bottom: 1px solid #a4a4a4;
-      color: #3a3a3a;
-      &:hover,&:focus{
-        color: #6fbc00;
-        border-bottom: 1px solid #6fbc00;
-        background: none;
-      }
-    }
-    padding-bottom: 10px;
-  }
-  input[type=checkbox]:checked~#dropdown{
-    top:5px;
-    left: -130px;
-  }
-
-
-}
-
-
-.parallax-window {
-  min-height: 100vh;
-  background: transparent;
-}
-
-
-div.section{
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+.head-content{
   position: relative;
-  top: 0;
+  top:0;
   left: 0;
-}
-div.content{
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 100%;
+  display: block;
   margin: 0 auto;
-
-  button{
-    font-size: 16px;
-    margin: 15px auto;
-    background: #6fbc00;
-    padding: 15px 0;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    &:hover{
-      background: darken(#6fbc00,10%);
-    }
-    &:focus {outline:none;}
-    &::-moz-focus-inner {border:0;}
+  width: 100%;
+  height: 80px;
+  max-width: 1200px;
+  .logo{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    z-index: 99;
   }
+
+  #nav{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    width: 150px;
+    height: 150px;
+    z-index: 999;
+    .dropdown-main{
+      display: block;
+      width: 100%;
+      height: 100%;
+      label{
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        cursor: pointer;
+        user-select: none;
+
+        font-family: '';
+        display: block;
+        width: 45px;
+        height: 45px;
+        transition: all 3s;
+        &:before {
+          margin-left: 6px;
+          line-height: 46px;
+          font-size: 60px;
+          content: "\2261";
+        }
+      }
+      ul{
+        border-radius: 0;
+        background: lighten(#cecece,15%);
+        width: 140px;
+        top: -300px;
+        .active{
+          color: #6fbc00;
+          border-bottom: 1px solid #6fbc00;
+        }
+        a{
+          width: 130px;
+          margin-left: 10px;
+          border-bottom: 1px solid #a4a4a4;
+          color: #3a3a3a;
+          &:hover,&:focus{
+            color: #6fbc00;
+            border-bottom: 1px solid #6fbc00;
+            background: none;
+          }
+        }
+        padding-bottom: 10px;
+        li{
+          display: block;
+        }
+        li:hover,li:focus{
+          background: none;
+        }
+      }
+      input[type=checkbox]:checked~#dropdown{
+        top: 50px;
+      }
+    }
+  }
+}
+.scrollMenu #nav .dropdown-main .show-drop{
+  background: #6fbc00;
+}
+
+
+#intro {
+  background:url('../img/header.jpg') 50% 0 no-repeat fixed;
+  color: #fff;
+  margin: 0;
+  background-size: cover;
 }
 
 #intro .content{
-  top: 150px;
+  margin-top: 50px;
 
-  h3, h1{
-    text-align: center;
-    color: white;
-  }
   h1{
     color: #fff;
-    font-size: 26px;
   }
   h3{
     color: #a4a4a4;
     font-size: 14px;
+    margin: 30px auto;
   }
 }
 
-.scroll{
-  position: absolute;
-  bottom: 10px;
-  z-index: 99;
-  width: 100%;
-  margin: 0 auto;
-  span{
-    display: block;
-    margin: 0 auto;
-    width: 40px;
-  }
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
 }
 
-.line{
-  width: 30px;
-  height: 4px;
-  background: red;
-  display: block;
-  margin: 10px auto;
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
 }
 
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .head-content #nav{
+    position: fixed;
+    width: 400px;
+    top: 20px;
+    left: 45%;
+    height: 40px;
 
+    .dropdown-main{
+      height: auto;
 
+      input[type=checkbox] {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
 
+      label {
+        display: none;
+        margin: 0;
+      }
 
+      ul{
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+        height: auto;
+        top: 0;
+        right: 0;
+        background: transparent;
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
 
+        li{
+          a{
+            font-size: 18px;
+            border: none;
+            color: #8a8a8a;
+            width: auto;
+            float: right;
+            padding: 0 10px;
+          }
+        }
 
-
-
-
-
-
-
-
-
-/*#intro{
-  &:after{
-    position: absolute;
-    content: '';
-    bottom: -8%;
-    left: -10%;
-    width: 50%;
-    border-radius: 100% 50%;
-
-    -ms-transform: rotate(5deg); !* IE 9 *!
-    -webkit-transform: rotate(5deg); !* Safari *!
-    transform: rotate(5deg);
-
-    background-color: #fff;
-    height: 140px;
-    z-index: 1;
+        &:hover,&:focus{
+          background: none;
+          box-shadow: none;
+        }
+      }
+    }
   }
-}*/
+  .bg-scrollMenu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
 
-/*.parallax-mirror:after{
-  position: absolute;
-  right: -30%;
-  bottom: -5%;
-  border-radius: 100% 0 0 0;
-  height: 200px;
-  content: '';
-  width: 105%;
-  background: #fff;
+    width: 100%;
+    height: 50px;
+  }
+  .bg-scrollMenuON{
+    background: rgba(20, 95, 47, 0.75);
+  }
+  .scrollMenu{
+    #nav{
+      top: 10px;
+      .dropdown-main ul li a{
+        color: #c3c3c3;
+      }
 
-  -ms-transform: rotate(3deg); !* IE 9 *!
-  -webkit-transform: rotate(3deg); !* Safari *!
-  transform: rotate(3deg);
-}*/
+    }
+  }
 
-/*@-ms-viewport {
-   width: device-width;
-}*/
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .head-content #nav {
+    position: fixed;
+    width: 500px;
+    left: 48%;
+  }
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+  .head-content #nav {
+    position: fixed;
+    width: 500px;
+    left: 52%;
+  }
+}

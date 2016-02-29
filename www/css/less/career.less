@@ -1,17 +1,72 @@
 div#career {
-  background: #dcdcdc; //#f2f2f2;
+  background: #f2f2f2;
   &:after{
     position: absolute;
-    top: -80px;
+    top: -50px;
     right: -8%;
     content: '';
     width: 130%;
-    height: 200px;
+    height: 100px;
     background: inherit;
     border-radius: 80% 0 0 30%;
+    z-index: 4;
 
     -ms-transform: rotate(-1deg); /* IE 9 */
     -webkit-transform: rotate(-1deg); /* Safari */
     transform: rotate(-1deg);
   }
+
+  .span-mini-24{
+    z-index: 999;
+  }
+
+  .harmonica{
+    margin-top: 5px;
+    background: transparent;
+
+    label{
+      color: #6fbc00;
+      font-size: 16px;
+      text-align: left;
+      border: none;
+      background: transparent;
+
+      .me-down, .me-up{
+        font-size: 20px;
+        width: 20px;
+        float: right;
+      }
+      .me-down{
+        visibility: visible;
+      }
+      .me-up{
+        visibility: hidden;
+      }
+    }
+
+    .harmonica input:checked+.main-panel {
+
+      .me-down{
+        visibility: hidden;
+      }
+      .me-up{
+        visibility: visible;
+      }
+    }
+
+    .show-harmonica{
+      padding: 5px 15px;
+      text-align: justify;
+      background: transparent;
+      font-size: 12px;
+      color: #000;
+    }
+
+    .main-panel {
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+    }
+  }
+
+
 }

@@ -1,18 +1,104 @@
-
-
-@import "header";
-@import "products";
-@import "career";
-@import "contact";
-
-@import "proxima-font";
-@import "meicon";
-@import "variables";
+html, body{
+  height:100%;
+}
 
 body.modpreneur{
   font-family: "Proxima Nova Lt", sans-serif;
   color: #a4a4a4;
   background: #000;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+
+  h1{
+    color: #000;
+    font-size: 28px;
+    text-align: center;
+  }
+  h1,h2,h3{
+    text-align:center;
+  }
+
+  a{
+    color: #a4a4a4;
+    transition: color 0.5s;
+    &:hover{
+      color: #6fbc00;
+    }
+  }
+  div.section{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  div.content{
+    display: block;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    z-index: 99;
+    max-width: 650px;
+
+    button{
+      font-size: 16px;
+      margin: 15px auto;
+      background: #6fbc00;
+      padding: 15px 0;
+      border-radius: 30px;
+
+      width: 100%;
+      border: none;
+      &:hover{
+        background: darken(#6fbc00,10%);
+      }
+      &:focus {outline:none;}
+      &::-moz-focus-inner {border:0;}
+    }
+  }
+  .scroll{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    z-index: 999;
+    span{
+      display: block;
+      margin: 0 auto;
+      width: 40px;
+      z-index: 999;
+    }
+  }
+}
+.line{
+  width: 35px;
+  height: 4px;
+  background: #a6a6a6;
+  display: block;
+  margin: 10px auto;
+}
+
+@import "header";
+@import "products";
+@import "career";
+@import "contact";
+@import "proxima-font";
+@import "meicon";
+@import "variables";
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 900px) {
+
+  .section{
+    height: 700px;
+  }
+  #products{
+    height: 900px;
+  }
+
+
 }
 
 

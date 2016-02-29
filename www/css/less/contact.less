@@ -1,8 +1,51 @@
 div#contact {
-  background: yellow;
+  background: #fff;
+
   &:after {
-    bottom: 0;
-    top: -60px;
-    left: -10px;
+    position: absolute;
+    content: '';
+    display: block;
+    width: 180%;
+    height: 130px;
+    background: #fff;
+    z-index: 10;
+
+    bottom: -70px;
+    left: -40%;
+    border-radius: 0  0 100% 100%;
   }
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 130%;
+    height: 150px;
+    background: #fff;
+    z-index: 4;
+
+    top: -50px;
+    right: -25%;
+    border-radius: 100% 100% 0 0;
+
+    -ms-transform: rotate(2deg); /* IE 9 */
+    -webkit-transform: rotate(2deg); /* Safari */
+    transform: rotate(2deg);
+  }
+
+
+  h1{
+    color: #000;
+    font-size: 24px;
+  }
+  h2{
+    color: #000;
+    font-size: 22px;
+  }
+  h3{
+    color: #979797;
+    font-size: 14px;
+    text-align: center;
+  }
+
 }
