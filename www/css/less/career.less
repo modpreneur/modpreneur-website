@@ -1,3 +1,5 @@
+@import "meicon";
+
 div#career {
   background: #f2f2f2;
   &:after{
@@ -16,45 +18,27 @@ div#career {
     transform: rotate(-1deg);
   }
 
-  .span-mini-24{
-    z-index: 999;
+  h1{
+    //margin-top: 60px;
+  }
+  h2{
+    color: #727272;
+    font-size: 18px;
+    text-align: center;
   }
 
-  .harmonica{
+  .span-mini-24{
+    z-index: 5;
+  }
+
+  .sm-hide{
+    display: none;
+  }
+
+  .harmonica {
     margin-top: 5px;
     background: transparent;
-
-    label{
-      color: #6fbc00;
-      font-size: 16px;
-      text-align: left;
-      border: none;
-      background: transparent;
-
-      .me-down, .me-up{
-        font-size: 20px;
-        width: 20px;
-        float: right;
-      }
-      .me-down{
-        visibility: visible;
-      }
-      .me-up{
-        visibility: hidden;
-      }
-    }
-
-    .harmonica input:checked+.main-panel {
-
-      .me-down{
-        visibility: hidden;
-      }
-      .me-up{
-        visibility: visible;
-      }
-    }
-
-    .show-harmonica{
+    .show-harmonica {
       padding: 5px 15px;
       text-align: justify;
       background: transparent;
@@ -65,8 +49,87 @@ div#career {
     .main-panel {
       border: 1px solid #d9d9d9;
       border-radius: 5px;
+
+      -webkit-transition: all 1s cubic-bezier(.25,.46,.45,.94);
+      -moz-transition: all 1s cubic-bezier(.25,.46,.45,.94);
+      transition: all 1s cubic-bezier(.25,.46,.45,.94);
+      label[for^="harmonica"] {
+        color: #6fbc00;
+        text-align: left;
+        position: relative;
+        background: transparent;
+        &:before {
+          position: absolute;
+          top: 10px;
+          right: 6px;
+
+          font-family: 'meIcons';
+          content: "\e924";
+          color: #6fbc00;
+          font-size: 18px;
+          border: none;
+          background: transparent;
+        }
+      }
     }
   }
 
+  input[id^="harmonica"]:checked + .main-panel{
+    -webkit-transition: all 1s cubic-bezier(.25,.46,.45,.94);
+    -moz-transition: all 1s cubic-bezier(.25,.46,.45,.94);
+    transition: all 1s cubic-bezier(.25,.46,.45,.94);
+    label[for^="harmonica"] {
+      color: #6fbc00;
+      text-align: left;
+      position: relative;
+      background: #e8e8e8;;
+      &:before {
+        content: "\e923";
+      }
+    }
+  }
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
 
 }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .small-hidden{
+    display: inline;
+  }
+  div#career .sm-hide{
+    display: block;
+    margin: 15px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+  div#career .harmonica .show-harmonica{
+    font-size: 14px;
+  }
+
+  }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 1200px) {
+
+  div#career h2{
+    font-size: 22px;
+  }
+}
+
+
+
+
+
+

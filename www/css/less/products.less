@@ -4,13 +4,11 @@
   height: 200vh;
 
   h1{
-    margin: 15px auto;
+    //margin: 15px auto;
     color: #000;
-    font-size: 24px;
   }
   h2{
-    color: #000;
-    font-size: 18px;
+    color: #232323;
   }
   h3{
     color: #979797;
@@ -56,6 +54,29 @@
         background: #979797;
         border-radius: 100%;
       }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  #products{
+    height: 100vh;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  #products .product-items .row {
+    min-height: 115px;
+    &:after {
+      display: none;
+    }
+  }
+  #products .product-items{
+    h2, h3 {
+      text-align: left;
+      margin-left: 30px;
     }
   }
 }

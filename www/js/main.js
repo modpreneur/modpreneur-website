@@ -1,4 +1,8 @@
+
+
+
 $(document).ready(function () {
+
     $(document).on("scroll", onScroll);
 
     //smoothscroll
@@ -26,12 +30,6 @@ $(document).ready(function () {
     });
 
 
-    //harmonica
-    $('.harmonica label').on('click', function () {
-        $('.harmonica label .me-down').addClass('me-up');
-        $('.harmonica label .me-up').removeClass('me-down');
-    }
-
 });
 
 function onScroll(event){
@@ -57,36 +55,3 @@ function onScroll(event){
         }
     });
 }
-
-/*$(document).ready(function() {
-    $("#dropdown li a").addEventListener("click", function(){
-        document.getElementById("show-menu").checked=0;
-    });
-});*/
-
-/*
-$("#dropdown li a").click(menuHandler('show-menu'));
-
-function menuHandler(input){
-    document.getElementById(input).checked=0;
-}*/
-
-
-/*
-$(function() {
-    $("#dropdown li a").click(menuHandler());
-    $("#dropdown li a").addClass('lolbubds');
-});
-
-function menuHandler(){
-    $("#show-menu").checked=0;
-}
-*/
-
-/*
-$(document).ready(function() {
-    $("#dropdown li a").click(function(){
-        $("#show-menu").checked=0;
-    });
-});*/
-
