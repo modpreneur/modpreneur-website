@@ -12,15 +12,17 @@
     <!--Stylesheet with bowtie-->
     <link rel="stylesheet" href="css/bowtie.css">
     <link rel="stylesheet" href="css/style.css">
-    <!--<link rel="stylesheet" href="css/meicons.css">-->
 
     <title>Moderní podnikatel</title>
 </head>
 
 <body class="modpreneur">
-    <div class="container-fluid">
+<div class="container-fluid">
 
     <div id="intro" class="section">
+
+
+        <canvas id="myCanvas1" width='100%'></canvas>
 
         <div class="head-content">
             <object data="img/logo.svg" width="180px" height="50px" type="image/svg+xml" class="logo">
@@ -65,6 +67,8 @@
 
     <div id="products" class="section">
 
+        <canvas id="myCanvas2" width='100%'></canvas>
+
         <div class="content">
             <div class="span-mini-24">
 
@@ -78,112 +82,112 @@
                 <div class="product-items">
 
                     <div class="span-none-padding-medium-11">
-                    <div class="row">
-                        <div class="span-none-padding-mini-4">
+                        <div class="row">
+                            <div class="span-none-padding-mini-4">
                             <span class="me-necktie">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                                 <span class="path3"></span>
                                 <span class="path4"></span>
                             </span>
+                            </div>
+                            <div class="span-none-padding-mini-20">
+                                <h2>Necktie</h2>
+                                <h3>Správa produktů a všech zákazníků dokáže
+                                    být oříškem. Rozlousknout problém a&nbsp;proměnit
+                                    výsledek na jedničku umí Necktie dokonale.
+                                </h3>
+                            </div>
                         </div>
-                        <div class="span-none-padding-mini-20">
-                            <h2>Necktie</h2>
-                            <h3>Správa produktů a všech zákazníků dokáže
-                                být oříškem. Rozlousknout problém a&nbsp;proměnit
-                                výsledek na jedničku umí Necktie dokonale.
-                            </h3>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="span-none-padding-mini-4">
+                        <div class="row">
+                            <div class="span-none-padding-mini-4">
                         <span class="me-eldredge">
                             <span class="path1"></span>
                             <span class="path2"></span>
                         </span>
+                            </div>
+                            <div class="span-none-padding-mini-20">
+                                <h2>Elderedge</h2>
+                                <h3>Nastavit rovnováhu mezi produkty
+                                    a&nbsp;zákazníkem chce trpělivost,
+                                    znalosti a&nbsp;rozvahu. Eldredge
+                                    zvládne všechno a&nbsp; rychle. Ani se nezapotí.
+                                </h3>
+                            </div>
                         </div>
-                        <div class="span-none-padding-mini-20">
-                            <h2>Elderedge</h2>
-                            <h3>Nastavit rovnováhu mezi produkty
-                                a&nbsp;zákazníkem chce trpělivost,
-                                znalosti a&nbsp;rozvahu. Eldredge
-                                zvládne všechno a&nbsp; rychle. Ani se nezapotí.
-                            </h3>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="span-none-padding-mini-4">
+                        <div class="row">
+                            <div class="span-none-padding-mini-4">
                             <span class="me-tiecons">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                             </span>
+                            </div>
+                            <div class="span-none-padding-mini-20">
+                                <h2>Tiecons</h2>
+                                <h3>Vítejte ve světě, kde pixely ztrácí
+                                    svůj váznam. Weby připravené pro
+                                    nekonečná rozlišení&nbsp;a podpora všech prohlížečů&nbsp;z doby kamenné.
+                                </h3>
+                            </div>
                         </div>
-                        <div class="span-none-padding-mini-20">
-                            <h2>Tiecons</h2>
-                            <h3>Vítejte ve světě, kde pixely ztrácí
-                                svůj váznam. Weby připravené pro
-                                nekonečná rozlišení&nbsp;a podpora všech prohlížečů&nbsp;z doby kamenné.
-                            </h3>
-                        </div>
-                    </div>
                     </div>
 
                     <div class="span-none-padding-medium-2"></div>
 
                     <div class="span-none-padding-medium-11">
-                    <div class="row">
-                        <div class="span-none-padding-mini-4">
+                        <div class="row">
+                            <div class="span-none-padding-mini-4">
                             <span class="me-ascot">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                                 <span class="path3"></span>
                                 <span class="path4"></span>
                             </span>
+                            </div>
+                            <div class="span-none-padding-mini-20">
+                                <h2>Ascot</h2>
+                                <h3>Představte si nedělní pohodu
+                                    s&nbsp;tabletem v ruce.&nbsp;S&nbsp;nápadem
+                                    v&nbsp;hlavě a&nbsp;Ascotem nyní vytvoříte
+                                    mistrovská díla. Webová díla.
+                                </h3>
+                            </div>
                         </div>
-                        <div class="span-none-padding-mini-20">
-                            <h2>Ascot</h2>
-                            <h3>Představte si nedělní pohodu
-                                s&nbsp;tabletem v ruce.&nbsp;S&nbsp;nápadem
-                                v&nbsp;hlavě a&nbsp;Ascotem nyní vytvoříte
-                                mistrovská díla. Webová díla.
-                            </h3>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="span-none-padding-mini-4">
+                        <div class="row">
+                            <div class="span-none-padding-mini-4">
                             <span class="me-bowtie">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                             </span>
+                            </div>
+                            <div class="span-none-padding-mini-20">
+                                <h2>Bowtie</h2>
+                                <h3>Spojili jsme neslučitelné. Rychlé kódování
+                                    s perfektním výsledkem není už jen ve hvězdách.
+                                    Síla Bowtie je nyní ve vašich rukou.
+                                </h3>
+                            </div>
                         </div>
-                        <div class="span-none-padding-mini-20">
-                            <h2>Bowtie</h2>
-                            <h3>Spojili jsme neslučitelné. Rychlé kódování
-                                s perfektním výsledkem není už jen ve hvězdách.
-                                Síla Bowtie je nyní ve vašich rukou.
-                            </h3>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="span-none-padding-mini-4">
+                        <div class="row">
+                            <div class="span-none-padding-mini-4">
                             <span class="me-trinity">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                                 <span class="path3"></span>
                             </span>
+                            </div>
+                            <div class="span-none-padding-mini-20">
+                                <h2>Trinity</h2>
+                                <h3>Některé frameworky si zakládají na
+                                    lenosti programátorů a&nbsp;chtějí zjednodušit
+                                    jejich práci. Trinity posouvá hranice mnohem dál.
+                                </h3>
+                            </div>
                         </div>
-                        <div class="span-none-padding-mini-20">
-                            <h2>Trinity</h2>
-                            <h3>Některé frameworky si zakládají na
-                                lenosti programátorů a&nbsp;chtějí zjednodušit
-                                jejich práci. Trinity posouvá hranice mnohem dál.
-                            </h3>
-                        </div>
-                    </div>
                     </div>
 
                 </div>
@@ -198,6 +202,9 @@
     </div>
 
     <div id="career" class="section">
+
+        <canvas id="myCanvas3" width='100%'></canvas>
+
         <div class="content">
             <div class="span-mini-24">
                 <h1>Perfektní místo pro start kariéry</h1>
@@ -343,15 +350,18 @@
 
     <div id="maps" class="section">
 
+        <canvas id="myCanvas4" width='100%'></canvas>
+
+
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4329.614821955478!2d18.26090964608554!3d49.81606456143781!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e35de386fc53%3A0xe8ee482e38266745!2zUG9ocmFuacSNbsOtIDUwNC8yNywgNzAzIDAwIE9zdHJhdmEtVsOtdGtvdmljZSwgxIxlc2vDoSByZXB1Ymxpa2E!5e0!3m2!1scs!2sus!4v1456602545798"
-                    width="100%" height="350px" frameborder="0" style="border:0; color:black;" allowfullscreen></iframe>
-       <!-- <footer>
-            <div class="relative">
-                <img src="img/msk_logo.png" alt="Moravskoslezským kraj">
-                <h3>Tento projekt je podporován Moravskoslezským krajem.</h3>
-                <h3>ModerniPodnikatel © All rights reserved 2015</h3>
-            </div>
-        </footer>-->
+                width="100%" height="500px" frameborder="0" style="border:0; color:black;" id="map" allowfullscreen></iframe>
+        <!-- <footer>
+             <div class="relative">
+                 <img src="img/msk_logo.png" alt="Moravskoslezským kraj">
+                 <h3>Tento projekt je podporován Moravskoslezským krajem.</h3>
+                 <h3>ModerniPodnikatel © All rights reserved 2015</h3>
+             </div>
+         </footer>-->
 
         <div class="scroll">
             <a href="#intro" class="smoothScroll">
@@ -361,10 +371,11 @@
 
     </div>
 
-    </div>
-    </div>
+</div>
+</div>
 </body>
 
 <script src="js/jquery-1.12.1.min.js"></script>
 <script src="js/main.js"></script>
+
 </html>
