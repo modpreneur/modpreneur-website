@@ -79,6 +79,7 @@ $(document).ready(function () {
     c3.style.width = '100%';
     c3.style.height ='100px';
     c3.style.position = 'absolute';
+    //c3.style.zIndex = '9';
     var ctx3 = c3.getContext("2d");
     ctx3.beginPath();
     ctx3.fillStyle="#fff";
