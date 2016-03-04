@@ -1,88 +1,91 @@
 
-#products{
+#products {
   background: #fff;
-  height: 200vh;
-  max-height: 800px;
+  height: 260vh;
+  max-height: 900px;
 
-  h1{
+  h1 {
     //margin: 15px auto;
     color: #000;
   }
-  h2{
+  h2 {
     color: #232323;
+    font-size: 16px;
   }
-  h3{
+  h3 {
     color: #979797;
-    font-size: 14px;
     text-align: center;
   }
   .product-items {
     margin-top: 10px;
-    h2,h3{
+    h2, h3 {
       text-align: left;
       margin-left: 5px;
     }
-    .row{
+    .row {
       display: block;
       width: 100%;
       padding: 15px 0;
-      /*&:after{
+      &:after {
         position: relative;
         bottom: -15px;
         left: 5%;
         width: 90%;
         height: 1px;
         background: #e4e4e4;
-      }*/
-      h2{
+      }
+      h2 {
         font-weight: 600;
       }
     }
   }
 
-  .show-products {
-    width: 100%;
-    font-size: 24px;
-    .dots {
-      font-size: 14px;
-      display: block;
-      width: 32px;
-      margin: 30px auto 0 auto;
-      .circle {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        background: #979797;
-        border-radius: 100%;
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width: 480px) {
+    height: 140vh;
+    .product-items {
+      margin-top: 10px;
+      h2, h3 {
+        margin-left: 10px;
+      }
+      .row {
+        &:after {
+          left: 10%;
+          width: 85%;
+        }
       }
     }
   }
-}
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-  #products{
-    height: 100vh;
-  }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width: 768px) {
-  #products .product-items .row {
-    min-height: 115px;
-    &:after {
-      display: none;
-    }
-  }
-  #products .product-items{
-    h2, h3 {
-      text-align: left;
-      margin-left: 30px;
-    }
-  }
-  #products{
+  /* Small Devices, Tablets */
+  @media only screen and (min-width: 768px) {
     max-height: 100vh;
+    h2{
+      margin: 0 10px;
+    }
+    .product-items .row {
+      min-height: 115px;
+      &:after {
+        display: none;
+      }
+    }
+
+    .product-items {
+      h2, h3 {
+        text-align: left;
+        margin-left: 20px;
+      }
+    }
+
   }
-
-
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width: 900px) {
+    h2{
+      margin: 0;
+      font-size: 20px;
+    }
+    h2, h3 {
+      margin-left: 10px;
+    }
+  }
 }

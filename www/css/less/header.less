@@ -1,275 +1,336 @@
 
-a{
-  color: #a4a4a4;
-  transition: color 0.5s;
-  &:hover{
-    color: #6fbc00;
-  }
-}
-
-.head-content{
-  position: relative;
-  top:0;
-  left: 0;
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  height: 80px;
-  max-width: 1200px;
-  .logo{
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: transparent;
-    z-index: 99;
+  a {
+    color: #a4a4a4;
+    transition: color 0.5s;
+    &:hover {
+      color: #6fbc00;
+    }
   }
 
-  #nav{
-    position: fixed;
-    top: 15px;
-    right: 15px;
+  .head-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    max-width: 1200px;
+    .logo {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: transparent;
+      z-index: 99;
+      width: 180px;
+      height: 50px;
+    }
 
-    width: 45px;
-    height: 45px;
-    z-index: 999;
-    .dropdown-main{
-      display: block;
+    #nav {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+
       width: 45px;
       height: 45px;
-
-      label{
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        cursor: pointer;
-        user-select: none;
-
-        font-family: '';
+      z-index: 999;
+      .dropdown-main {
         display: block;
         width: 45px;
         height: 45px;
-        transition: all 3s;
-        &:before {
-          margin-left: 6px;
-          line-height: 46px;
-          font-size: 60px;
-          content: "\2261";
+
+        label {
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          cursor: pointer;
+          user-select: none;
+
+          font-family: '';
+          display: block;
+          width: 45px;
+          height: 45px;
+          transition: all 3s;
+          &:before {
+            margin-left: 6px;
+            line-height: 46px;
+            font-size: 60px;
+            content: "\2261";
+          }
         }
-      }
-      ul{
-        border-radius: 0;
-        background: lighten(#cecece,15%);
-        width: 140px;
-        top: -300px;
-        .active{
-          color: #6fbc00;
-          border-bottom: 1px solid #6fbc00;
-        }
-        a{
-          width: 130px;
-          margin-left: 10px;
-          border-bottom: 1px solid #a4a4a4;
-          color: #3a3a3a;
-          &:hover,&:focus{
+        ul {
+          border-radius: 0;
+          background: lighten(#cecece, 15%);
+          width: 140px;
+          top: -300px;
+          .active {
             color: #6fbc00;
             border-bottom: 1px solid #6fbc00;
+          }
+          a {
+            width: 130px;
+            margin-left: 10px;
+            border-bottom: 1px solid #a4a4a4;
+            color: #3a3a3a;
+            &:hover, &:focus {
+              color: #6fbc00;
+              border-bottom: 1px solid #6fbc00;
+              background: none;
+            }
+          }
+          padding-bottom: 10px;
+          li {
+            display: block;
+          }
+          li:hover, li:focus {
             background: none;
           }
         }
-        padding-bottom: 10px;
-        li{
-          display: block;
+        input[type=checkbox]:checked ~ #dropdown {
+          top: 45px;
+          margin-left: -105px;
         }
-        li:hover,li:focus{
-          background: none;
-        }
-      }
-      input[type=checkbox]:checked~#dropdown{
-        top: 45px;
-        margin-left: -105px;
       }
     }
   }
-}
-.scrollMenu #nav .dropdown-main .show-drop{
-  background: #6fbc00;
-}
-
-#intro button{
-  background: transparent;
-  border: 3px solid #6fbc00;
-  border-radius: 0;
-
-  &:hover{
-    border-radius: 30px;
-    background: #549400;
+  .scrollMenu #nav .dropdown-main .show-drop {
+    background: #6fbc00;
   }
-}
-#intro {
-  background:url('../img/header.jpg') 50% 0 no-repeat fixed;
-  color: #fff;
-  margin: 0;
-  background-size: cover;
-}
 
-#intro .content{
-  margin-top: 50px;
-
-  h1{
+  #intro {
+    background: url('../img/header.jpg') 50% 0 no-repeat fixed;
     color: #fff;
-    font-size: 30px;
-    max-width: none;
+    margin: 0;
+    background-size: cover;
   }
-  h3{
-    color: #a4a4a4;
-    font-size: 14px;
-    margin: 30px auto;
+
+  #intro .content {
+    margin-top: 50px;
+
+    h1 {
+      color: #fff;
+      font-size: 30px;
+      max-width: none;
+    }
+    h2 {
+      color: #a4a4a4;
+      margin: 15px auto;
+    }
   }
-}
-.bg-scrollMenu{
-  display: none;
-}
+  .bg-scrollMenu {
+    display: none;
+  }
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
+  /* Custom, iPhone Retina */
+  @media only screen and (min-width: 320px) {
 
-}
+  }
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width: 480px) {
 
-}
+  }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-  .head-content #nav{
-    position: fixed;
-    width: 400px;
-    top: 20px;
-    left: 45%;
-    height: 40px;
-
-    .dropdown-main{
-      height: auto;
+  /* Small Devices, Tablets */
+  @media only screen and (min-width: 768px) {
+    .head-content #nav {
       width: 400px;
-      #dropdown{
-        width: 400px;
-      }
+      .dropdown-main {
+        #dropdown {
+          height: 50px;
+          width: 400px;
+        }
+        input[type=checkbox] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+        label {
+          display: none;
+          margin: 0;
+        }
+        ul {
+          visibility: visible;
+          opacity: 1;
+          width: 100%;
+          height: auto;
+          top: 0;
+          right: 0;
+          background: transparent;
+          box-shadow: none;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          li {
+            a {
+              font-size: 18px;
+              border-bottom: 1px transparent;
+              color: #a3a3a3;
+              width: auto;
+              float: right;
+              padding: 10px 5px 0 5px;
+            }
+          }
 
-      input[type=checkbox] {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-
-      label {
-        display: none;
-        margin: 0;
-      }
-
-      ul{
-        visibility: visible;
-        opacity: 1;
-        width: 100%;
-        height: auto;
-        top: 0;
-        right: 0;
-        background: transparent;
-        box-shadow: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-
-        li{
-          a{
-            font-size: 18px;
-            border: none;
-            color: #8a8a8a;
-            width: auto;
-            float: right;
-            padding: 0 10px;
+          &:hover, &:focus {
+            background: none;
+            box-shadow: none;
           }
         }
+      }
+    }
 
-        &:hover,&:focus{
-          background: none;
-          box-shadow: none;
+    .bg-scrollMenu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 99;
+      display: block;
+      width: 100%;
+      height: 50px;
+    }
+
+    .bg-scrollMenuON {
+      background: rgba(20, 95, 47, 0.75);
+    }
+
+    .bg-scrollMenuONblack {
+      background: rgba(29, 29, 29, 0.75);
+    }
+
+    .scrollMenu {
+      #nav {
+          top: 0;
+
+        .dropdown-main ul li a {
+          color: #d3d3d3;
+        }
+
+      }
+    }
+
+
+    input[type=checkbox]:checked ~ #dropdown {
+      margin-left: 0;
+    }
+
+    #intro .content h1 {
+      font-size: 36px;
+    }
+
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width: 820px) {
+
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width: 992px) {
+    .head-content #nav {
+      left:50%;
+      top: 10px;
+      width: 500px;
+      .dropdown-main {
+        #dropdown{
+          width: 500px;
+        }
+        ul {
+          li {
+            a {
+              font-size: 22px;
+              padding: 15px 5px 0 5px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width: 1200px) {
+
+    .head-content #nav {
+      .dropdown-main {
+        #dropdown {
+          width: 500px;
+        }
+        ul {
+          li {
+            a {
+              padding: 15px 10px 0 10px;
+            }
+          }
         }
       }
     }
-  }
-  .bg-scrollMenu{
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99;
-    display: block;
-    width: 100%;
-    height: 50px;
-  }
-  .bg-scrollMenuON{
-    background: rgba(20, 95, 47, 0.75);
-  }
-  .bg-scrollMenuONblack{
-    background: rgba(29, 29, 29, 0.75);
-  }
-  .scrollMenu{
-    #nav{
-      top: 10px;
-      .dropdown-main ul li a{
-        color: #d3d3d3;
+    .scrollMenu #nav {
+      .dropdown-main {
+        #dropdown {
+          width: 500px;
+        }
+        ul {
+          li {
+            a {
+              padding: 10px 10px 0px 8px;
+            }
+          }
+        }
       }
+    }
+
+    .bg-scrollMenu {
+      height: 55px;
+    }
+
+    .head-content .logo {
+      top: 0;
+      width: 255px;
+      height: 100px;
+    }
+
+    #intro .content h1 {
+      font-size: 58px;
+    }
+
+    #intro .content h2 {
+      font-size: 22px;
+      margin: 10px;
+    }
+
+    #intro .content {
+      max-width: 900px;
+    }
+
+    .head-content {
+      #nav {
+        .dropdown-main ul {
+          top: 10px;
+        }
+      }
+    }
+
+    .scrollMenu {
+      #nav {
+        .dropdown-main ul {
+          top: 0;
+        }
+        .dropdown-main ul li a {
+          color: #d3d3d3;
+        }
+
+      }
+    }
+
+    .head-content #nav .dropdown-main #dropdown {
+      position: fixed;
+      width: 500px;
+      left: 50%;
+      //margin-left: -400px;
 
     }
-  }
-  input[type=checkbox]:checked~#dropdown{
-    margin-left: 0;
-  }
-  #intro .content h1{
-    font-size: 36px;
+
   }
 
-}
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 820px) {
-  .head-content #nav {
-    left: 50%;
-  }
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-  .head-content #nav {
-    margin-left: 90px;
-  }
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
-  #intro .content h1{
-    font-size: 58px;
-  }
-  #intro .content h3{
-   font-size: 22px;
-   margin: 10px;
-  }
-  #intro .content{
-    max-width: 900px;
-  }
-
-  .head-content #nav .dropdown-main ul{
-    top: 10px;
-  }
-
-  .head-content #nav .dropdown-main #dropdown {
-    position: fixed;
-    width: 600px;
-    left: 50%;
-  }
-
-}

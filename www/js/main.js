@@ -88,6 +88,25 @@ $(document).ready(function () {
     ctx3.fill();
     ctx3.stroke();
 
+    $('#brnBtn').on('click', function (){
+        $('.ostrava').addClass('hide');
+        $('#mapOstrava').addClass('hide');
+        $('.brno').removeClass('hide');
+        $('#mapBrno').removeClass('hide');
+        $('#contact #ovaBtn').removeClass('btnON');
+        $(this).addClass('btnON');
+    });
+
+    $('#ovaBtn').on('click', function (){
+        $('.ostrava').removeClass('hide');
+        $('#mapOstrava').removeClass('hide');
+        $('.brno').addClass('hide');
+        $('#mapBrno').addClass('hide');
+        $('#contact #brnBtn').removeClass('btnON');
+        $(this).addClass('btnON');
+    });
+
+
 });
 
 function onScroll(event){
