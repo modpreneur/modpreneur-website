@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cz">
+<html lang="cs">
 
 <head>
 
@@ -9,6 +9,21 @@
     <meta name="keywords" content="HTML,CSS,PHP,JavaScript,Design,Web,Práce,Brno,Ostrava,Startup">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicon/manifest.json">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <!--Stylesheet with bowtie-->
     <link rel="stylesheet" href="css/bowtie.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,8 +31,8 @@
     <title>Moderní podnikatel</title>
 </head>
 
-<body class="modpreneur">
-<div class="container-fluid">
+<body>
+<div class="container">
 
     <div id="intro" class="section">
 
@@ -352,27 +367,9 @@
 
         <canvas id="myCanvas4" width='100%'></canvas>
 
+        <div id="mapOstrava" class="hide"></div>
+        <div id="mapBrno"></div>
 
-        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4329.614821955478!2d18.26090964608554!3d49.81606456143781!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e35de386fc53%3A0xe8ee482e38266745!2zUG9ocmFuacSNbsOtIDUwNC8yNywgNzAzIDAwIE9zdHJhdmEtVsOtdGtvdmljZSwgxIxlc2vDoSByZXB1Ymxpa2E!5e0!3m2!1scs!2sus!4v1456602545798"
-                width="100%" height="500px" frameborder="0" style="border:0; color:black;" id="map" allowfullscreen></iframe>
-        --><!-- <footer>
-             <div class="relative">
-                 <img src="img/msk_logo.png" alt="Moravskoslezským kraj">
-                 <h3>Tento projekt je podporován Moravskoslezským krajem.</h3>
-                 <h3>ModerniPodnikatel © All rights reserved 2015</h3>
-             </div>
-         </footer>-->
-
-        <div id="map"></div>
-
-        <div id="footer">
-            <div id="map-canvas">
-                <span id="map-input">
-                    Pohraniční 504/27<br>
-                    Ostrava - Vítkovice, 703 00
-                </span>
-            </div>
-        </div>
 
         <div class="scroll">
             <a href="#intro" class="smoothScroll">
@@ -386,46 +383,14 @@
 </div>
 </body>
 
+
+<!--jQuery,scroll,menu,canvas-->
 <script src="js/jquery-1.12.1.min.js"></script>
 <script src="js/main.js"></script>
 
-
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-<script type="text/javascript">
-    // When the window has finished loading create our google map below
-    google.maps.event.addDomListener(window, 'load', init);
-
-    function init() {
-        // Basic options for a simple Google Map
-        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 13,
-
-            // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-            // How you would like to style the map.
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [{"featureType":"all","elementType":"all","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":13}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#353535"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#656565"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#505050"}]},{"featureType":"poi","elementType":"geometry.stroke","stylers":[{"color":"#808080"}]},{"featureType":"road","elementType":"all","stylers":[{"color":"#454545"}]},{"featureType":"transit","elementType":"labels","stylers":[{"hue":"#000000"},{"saturation":100},{"lightness":13},{"invert_lightness":true},{"gamma":1.5}]}]
-        };
-
-        // Get the HTML DOM element that will contain your map
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
-
-        // Create the Google Map using our element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
-
-        // Let's also add a marker while we're at it
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(40.6700, -73.9400),
-            map: map,
-            title: 'Snazzy!'
-        });
-    }
-</script>
+<!--Google maps-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="js/maps.js"></script>
 
 
 </html>

@@ -79,7 +79,7 @@ $(document).ready(function () {
     c3.style.width = '100%';
     c3.style.height ='100px';
     c3.style.position = 'absolute';
-    //c3.style.zIndex = '9';
+    c3.style.zIndex = '6';
     var ctx3 = c3.getContext("2d");
     ctx3.beginPath();
     ctx3.fillStyle="#fff";
@@ -87,10 +87,6 @@ $(document).ready(function () {
     ctx3.arc(50,0,80,0,2*Math.PI);
     ctx3.fill();
     ctx3.stroke();
-
-    //maps
-    $('#map').setAttribute('height','200px');
-
 
 });
 
