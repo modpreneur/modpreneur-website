@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Modern Entrepreneur is Web Application Development Company">
     <meta name="keywords" content="HTML,CSS,PHP,JavaScript,Design,Web,Práce,Brno,Ostrava,Startup">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!--Favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
@@ -42,20 +42,23 @@
 <div class="container-fluid">
 
     <div id="intro" class="section">
-
-
-        <canvas id="myCanvas1" width='100%'></canvas>
+        <canvas id="myCanvas1" width='100'></canvas>
 
         <div class="head-content">
             <object data="img/logo.svg"  type="image/svg+xml" class="logo">
-                <img src="img/logo.png" />
+                <img src="img/logo.png" alt="ModernEnterpreneur s.r.o" />
             </object>
 
-            <menu id="nav">
+            <div id="nav">
                 <div class="dropdown-main">
-                    <label for="show-menu" class="show-drop">
-                    </label>
+
                     <input type="checkbox" id="show-menu" role="button">
+                    <label for="show-menu" class="show-drop">
+                        <span id="menuRes1" class="menuRes1"></span>
+                        <span class="menuRes2"></span>
+                        <span class="menuRes3"></span>
+                        <span class="menuRes4"></span>
+                    </label>
                     <ul id="dropdown" class="drop">
                         <li><a href="#intro" class="active">Úvod</a></li>
                         <li><a href="#products">Naše produkty</a></li>
@@ -63,8 +66,9 @@
                         <li><a href="#contact">Kontakty</a></li>
                     </ul>
                 </div>
-            </menu>
+            </div>
         </div>
+
         <div class="bg-scrollMenu"></div>
 
         <div class="content">
@@ -89,10 +93,10 @@
 
     <div id="products" class="section">
 
-        <canvas id="myCanvas2" width='100%'></canvas>
+        <canvas id="myCanvas2" width='100'></canvas>
 
         <div class="content">
-            <div class="span-mini-24 span-none-padding-large-24">
+            <div class="span-mini-24 span-large-24">
 
                 <h1>Záleží nám na produktech</h1>
                 <span class="line"></span>
@@ -103,7 +107,7 @@
 
                 <div class="product-items row">
 
-                    <div class="span-mini-24 span-none-padding-medium-11">
+                    <div class="span-mini-24 span-medium-11">
                         <div class="row">
                             <div class="span-none-padding-mini-4">
                             <span class="me-necktie">
@@ -158,7 +162,7 @@
 
                     <div class="span-none-padding-medium-2"></div>
 
-                    <div class="span-mini-24 span-none-padding-medium-11">
+                    <div class="span-mini-24 span-medium-11">
                         <div class="row">
                             <div class="span-none-padding-mini-4">
                             <span class="me-ascot">
@@ -225,7 +229,7 @@
 
     <div id="career" class="section">
 
-        <canvas id="myCanvas3" width='100%'></canvas>
+        <canvas id="myCanvas3" width='100'></canvas>
 
         <div class="content">
             <div class="span-mini-24">
@@ -236,7 +240,7 @@
                     Odstartujte svou kariéru se zkušenými kolegy, kteří vás
                     provedou začátky a zapojí do týmu.
                 </h2>
-                <div class="span-none-padding-large-20 offset-large-2">
+                <div class="span-large-20 offset-large-2">
                     <div class="harmonica">
                         <input type="radio" id="harmonica-01" name="list">
                         <div class="main-panel">
@@ -323,16 +327,18 @@
             </div>
 
             <div class="row ostrava hide">
-                <div class="span-mini-24 span-medium-10">
+                <div class="span-none-padding-mini-24 span-small-12 span-medium-10">
                     <div class="row">
-                        <div class="span-none-padding-mini-4 span-medium-8">
+                        <!--icon-->
+                        <div class="span-none-padding-mini-6 span-none-padding-medium-4">
                             <span class="me-map-icon">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                                 <span class="path3"></span>
                             </span>
                         </div>
-                        <div class="span-none-padding-mini-20 span-medium-16">
+                        <!--text-->
+                        <div class="span-none-padding-mini-18 span-none-padding-medium-20">
                             <h2>Adresa společnosti</h2>
                             <h2 class="gr">Modern Entrepreneur s.r.o.</h2>
                             <h3>Pohraniční 504/27</h3>
@@ -342,36 +348,40 @@
                         </div>
                     </div>
                 </div>
-                <div class="span-medium-2"></div>
-                <div class="span-mini-24 span-medium-10">
+                <div class="span-medium-4"></div>
+                <div class="span-none-padding-mini-24 span-small-12 span-medium-10">
                     <div class="row">
-                        <div class="span-none-padding-mini-4 span-medium-2">
+                        <!--icon-->
+                        <div class="span-none-padding-mini-6 span-none-padding-medium-4">
                             <span class="me-user">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
+                                <span class="path1"></span>
+                                <span class="path2"></span>
                             </span>
                         </div>
-                        <div class="span-none-padding-mini-20 span-none-padding-medium-22">
+                        <!--text-->
+                        <div class="span-none-padding-mini-18 span-none-padding-medium-20">
                             <h2>Kontaktní osoba</h2>
-                            <h2> <p class="gr">Bublifuk Bořivoj</p> Dev Team Leader</h2>
-                            <h3>E-mail: <a href="mailto:kolek@modpreneur.com">kolek@modpreneur.com</a></h3>
-                            <h3>Telefon: <a href="tel:+420 778 535 817">+420 778 535 817</a></h3>
+                            <h2> <p class="gr">Bořivoj Papuča</p> Papuča Leader</h2>
+                            <h3>E-mail: <a href="mailto:kolek@modpreneur.com">papuca@modpreneur.com</a></h3>
+                            <h3>Telefon: <a href="tel:+420 778 535 817">+420 754 128 817</a></h3>
                             <h3>Na příjmu: Po–Pá, 8–17 hod.</h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row brno">
-                <div class="span-mini-24 span-medium-10">
+                <div class="span-none-padding-mini-24 span-small-12 span-medium-10">
                     <div class="row">
-                        <div class="span-none-padding-mini-4 span-medium-8">
+                        <!--icon-->
+                        <div class="span-none-padding-mini-6 span-none-padding-medium-4">
                             <span class="me-map-icon">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                                 <span class="path3"></span>
                             </span>
                         </div>
-                        <div class="span-none-padding-mini-20 span-medium-16">
+                        <!--text-->
+                        <div class="span-none-padding-mini-18 span-none-padding-medium-20">
                             <h2>Adresa společnosti</h2>
                             <h2 class="gr">Modern Entrepreneur s.r.o.</h2>
                             <h3>Pohraniční 504/27</h3>
@@ -381,17 +391,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="span-medium-2"></div>
-                <div class="span-mini-24 span-medium-10">
+                <div class="span-medium-4"></div>
+                <div class="span-none-padding-mini-24 span-small-12 span-medium-10">
                     <div class="row">
-                        <div class="span-none-padding-mini-4 span-medium-2">
+                        <!--icon-->
+                        <div class="span-none-padding-mini-6 span-none-padding-medium-4">
                             <!--<span class="me-user">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
+                                <span class="path1"></span>
+                                <span class="path2"></span>
                             </span>-->
-                            <img src="img/mar.png" width="70px" height="70px" alt="BOSS" style="margin-left: -40px">
+                            <img src="img/mar.png" alt="Martas" width="80" height="80">
                         </div>
-                        <div class="span-none-padding-mini-20 span-none-padding-medium-22">
+                        <!--text-->
+                        <div class="span-none-padding-mini-18 span-none-padding-medium-20">
                             <h2>Kontaktní osoba</h2>
                             <h2> <p class="gr">Martin Kolek</p> Boss Leader</h2>
                             <h3>E-mail: <a href="mailto:kolek@modpreneur.com">kolek@modpreneur.com</a></h3>
@@ -411,8 +423,7 @@
     </div>
 
     <div id="maps" class="section">
-
-        <canvas id="myCanvas4" width='100%'></canvas>
+        <canvas id="myCanvas4" width='100'></canvas>
 
         <div id="mapOstrava"></div>
         <div id="mapBrno"></div>
@@ -433,11 +444,7 @@
                 </a>
             </div>
         </footer>
-
-
     </div>
-
-</div>
 </div>
 </body>
 

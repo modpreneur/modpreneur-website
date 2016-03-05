@@ -5,20 +5,17 @@ var cordiOstrava= {lat: 49.816232,lng: 18.260720};
 google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
-    // Basic options, styles made as PSD design
+
     // Great app for styles http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
     var mapOptionsOstrava = {
-        // How zoomed in you want the map to start at (always required)
         zoom: 15,
-
-        // The latitude and longitude to center the map (always required)
-        center: cordiOstrava, // 49.163525, 16.593858
-
-
+        scrollwheel: false,
         disableDefaultUI: true,
-        // How you would like to style the map.
-        // This is where you would paste any style found on Snazzy Maps.
-
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_CENTER
+        },
+        center: cordiOstrava,
         styles: [
             {
                 "stylers": [
@@ -50,17 +47,14 @@ function init() {
         ]
     };
     var mapOptionsBrno = {
-        // How zoomed in you want the map to start at (always required)
         zoom: 15,
-
-        // The latitude and longitude to center the map (always required)
-        center: cordiBrno,
-
-
+        scrollwheel: false,
         disableDefaultUI: true,
-        // How you would like to style the map.
-        // This is where you would paste any style found on Snazzy Maps.
-
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_CENTER
+        },
+        center: cordiBrno,
         styles: [
             {
                 "stylers": [

@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
 
     var autoprefixer = require('autoprefixer');
-    require('load-grunt-tasks')(grunt);
+
 
     grunt.initConfig({
 
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     './js/main.js',
-                    './js/jquery-1.12.1.min.js'
+                    './js/maps.js'
                 ],
                 dest: './js/dist.js'
             }

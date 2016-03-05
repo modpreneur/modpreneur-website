@@ -28,36 +28,53 @@
 
     #nav {
       position: fixed;
-      top: 15px;
-      right: 15px;
+      top: 20px;
+      right: 10px;
 
-      width: 45px;
-      height: 45px;
+      width: 46px;
+      height: 46px;
       z-index: 999;
       .dropdown-main {
         display: block;
-        width: 45px;
-        height: 45px;
+        width: 46px;
+        height: 46px;
 
         label {
-          position: absolute;
+          position: relative;
           top: 0;
           right: 0;
+          display: block;
 
           cursor: pointer;
           user-select: none;
-
-          font-family: '';
-          display: block;
-          width: 45px;
-          height: 45px;
+          width: 40px;
+          height: 32px;
           transition: all 3s;
-          &:before {
-            margin-left: 6px;
-            line-height: 46px;
-            font-size: 60px;
-            content: "\2261";
+
+          .menuRes1,.menuRes2,.menuRes3,.menuRes4{
+            position: absolute;
+            top: 7px;
+            left: 5px;
+
+            height: 3px;
+            width: 30px;
+            background: #ffffff;
+            transition: all 0.7s;
           }
+          .menuRes2,.menuRes3{
+            top: 15px;
+          }
+
+          .menuRes4{
+            top: 23px;
+          }
+
+          &:hover
+          {
+            background: #6fbc00;
+          }
+
+
         }
         ul {
           border-radius: 0;
@@ -87,26 +104,48 @@
             background: none;
           }
         }
-        input[type=checkbox]:checked ~ #dropdown {
-          top: 45px;
-          margin-left: -105px;
+        input[type=checkbox]:checked {
+          ~ #dropdown {
+            top: 32px;
+            margin-left: -110px;
+          }
+        }
+        input[type="checkbox"]:checked ~ label{
+          .menuRes1,.menuRes4{
+            opacity: 0;
+          }
+          .menuRes2{
+            -ms-transform: rotate(405deg) scale(0.9); /* IE 9 */
+            -webkit-transform: rotate(405deg) scale(0.9); /* Chrome, Safari, Opera */
+            transform: rotate(405deg) scale(0.9);
+          }
+          .menuRes3{
+            -ms-transform: rotate(-225deg) scale(0.9); /* IE 9 */
+            -webkit-transform: rotate(-225deg) scale(0.9); /* Chrome, Safari, Opera */
+            transform: rotate(-225deg) scale(0.9);
+          }
         }
       }
     }
+
   }
   .scrollMenu #nav .dropdown-main .show-drop {
     background: #6fbc00;
   }
 
   #intro {
+    background-color: #232F23 ;
     background: url('../img/header.jpg') 50% 0 no-repeat fixed;
+    -webkit-backface-visibility: hidden;
+
     color: #fff;
     margin: 0;
     background-size: cover;
+    top: -2px;
   }
 
   #intro .content {
-    margin-top: 50px;
+    margin-top: 0;
 
     h1 {
       color: #fff;
@@ -122,14 +161,10 @@
     display: none;
   }
 
-  /* Custom, iPhone Retina */
-  @media only screen and (min-width: 320px) {
-
-  }
-
-  /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 480px) {
-
+  @media only screen and (min-height: 400px){
+    #intro .content {
+      margin-top: 50px;
+    }
   }
 
   /* Small Devices, Tablets */
@@ -192,7 +227,7 @@
     }
 
     .bg-scrollMenuON {
-      background: rgba(20, 95, 47, 0.75);
+      background: rgba(97, 97, 97, 0.75);
     }
 
     .bg-scrollMenuONblack {
@@ -218,11 +253,6 @@
     #intro .content h1 {
       font-size: 36px;
     }
-
-  }
-
-  /* Medium Devices, Desktops */
-  @media only screen and (min-width: 820px) {
 
   }
 
@@ -255,6 +285,7 @@
     .head-content #nav {
       .dropdown-main {
         #dropdown {
+          margin-left: 100px;
           width: 500px;
         }
         ul {
@@ -333,4 +364,7 @@
     }
 
   }
+
+
+
 

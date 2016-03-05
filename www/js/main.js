@@ -1,3 +1,21 @@
+window.onload = function () {
+    // only apply to IE
+    if (!/*@cc_on!@*/0) return;
+
+    // find every element to test
+    var all = document.getElementsByTagName('*'), i = all.length;
+
+    // fast reverse loop
+    while (i--) {
+        // if the scrollWidth (the real width) is greater than
+        // the visible width, then apply style changes
+        if (all[i].scrollWidth > all[i].offsetWidth) {
+            all[i].style['paddingBottom'] = '20px';
+            all[i].style['overflowY'] = 'hidden';
+        }
+    }
+};
+
 
 
 
@@ -31,10 +49,8 @@ $(document).ready(function () {
 
     //first transition for section
     var c = document.getElementById("myCanvas1");
-    c.style.width = '100%';
     c.style.height ='200px';
-    c.style.position = 'absolute';
-    c.style.bottom = 0;
+    c.style.bottom = "-1px";
    // c.style.backgroundColor = '#fff';
     var ctx = c.getContext("2d");
     ctx.beginPath();
@@ -48,10 +64,7 @@ $(document).ready(function () {
 
     //dvojka
     var c2 = document.getElementById("myCanvas2");
-    c2.style.width = '100%';
     c2.style.height ='300px';
-    c2.style.position = 'absolute';
-    c2.style.bottom = 0;
     var ctx2 = c2.getContext("2d");
     ctx2.beginPath();
     ctx2.fillStyle="#F2F2F2";
@@ -62,31 +75,27 @@ $(document).ready(function () {
 
     //trojka
     var c3 = document.getElementById("myCanvas3");
-    c3.style.width = '100%';
     c3.style.height ='300px';
-    c3.style.position = 'absolute';
-    c3.style.bottom = 0;
     var ctx3 = c3.getContext("2d");
     ctx3.beginPath();
+    ctx3.translate(10,0);
     ctx3.fillStyle="#fff";
     ctx3.strokeStyle="transparent";
     ctx3.arc(15,170,100,0,2*Math.PI);
     ctx3.fill();
     ctx3.stroke();
 
-    //trojka
-    var c3 = document.getElementById("myCanvas4");
-    c3.style.width = '100%';
-    c3.style.height ='100px';
-    c3.style.position = 'absolute';
-    c3.style.zIndex = '6';
-    var ctx3 = c3.getContext("2d");
-    ctx3.beginPath();
-    ctx3.fillStyle="#fff";
-    ctx3.strokeStyle="transparent";
-    ctx3.arc(50,0,80,0,2*Math.PI);
-    ctx3.fill();
-    ctx3.stroke();
+    //4
+    var c4 = document.getElementById("myCanvas4");
+    c4.style.height ='100px';
+    c4.style.zIndex = '6';
+    var ctx4 = c4.getContext("2d");
+    ctx4.beginPath();
+    ctx4.fillStyle="#fff";
+    ctx4.strokeStyle="transparent";
+    ctx4.arc(50,0,80,0,2*Math.PI);
+    ctx4.fill();
+    ctx4.stroke();
 
     $('#brnBtn').on('click', function (){
         $('.ostrava').addClass('hide');
