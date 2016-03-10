@@ -71,8 +71,8 @@
 
         <div class="bg-scrollMenu"></div>
 
-        <div class="content">
-            <div class="span-mini-24">
+        <div class="content row">
+            <div class="span-mini-24 span-none-padding-large-24">
                 <h1>Vyladěná řešení pro podnikatele</h1>
                 <h2>Moderní řešení pramení z kvalitních produktů, na které se můžete spolehnout.</h2>
                 <h2>Přejděte od snů k vytoužené cestě za růstem byznysu.</h2>
@@ -289,6 +289,9 @@
                             </div>
                         </div>
                     </div>
+                    <a href="#contact" class="smoothScroll span-mini-14 offset-mini-5 span-medium-14 offset-medium-5">
+                        <button class="button">chci více informací</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -304,7 +307,7 @@
     <div id="contact" class="section">
 
         <div class="content">
-            <div class="span-mini-24 span-xlarge-16 offset-large-4">
+            <div class="row span-mini-24 span-xlarge-16 offset-large-4">
                 <h1>Jsme připraveni na spolupráci</h1>
                 <span class="line"></span>
                 <h2 class="text-center">Už jen jedna zpráva nás dělí od
@@ -315,16 +318,15 @@
             </div>
 
             <!--buttons-->
-            <div class="span-mini-24">
-                <div class="span-medium-5"></div>
-                <div class="span-none-padding-mini-10 span-medium-5">
-                    <button class="button" id="ovaBtn">Ostrava</button>
+
+                <div class="offset-mini-5 span-mini-14">
+                    <div class="buttons margin-auto">
+                        <button class="button" id="ovaBtn">OSTRAVA</button>
+                        <button class="button btnON" id="brnBtn">BRNO</button>
+                    </div>
                 </div>
-                <div class="span-none-padding-mini-4 span-medium-4"></div>
-                <div class="span-none-padding-mini-10 span-medium-5">
-                    <button class="button btnON" id="brnBtn">Brno</button>
-                </div>
-            </div>
+
+
 
             <div class="row ostrava hide">
                 <div class="span-none-padding-mini-24 span-small-12 span-medium-10">
@@ -429,19 +431,12 @@
         <div id="mapBrno"></div>
 
         <footer>
-            <div class="span-none-padding-mini-8 span-large-2 offset-large-8">
-                <object data="img/logo-msk.svg"  type="image/svg+xml" class="logoMSK">
-                    <img src="img/msk_logo.png" />
-                </object>
-            </div>
-            <div class="span-none-padding-mini-15 span-large-10">
+            <div class="container">
                 <h3>Tento projekt je podporován Moravskoslezským krajem.</h3>
                 <h3>ModerniPodnikatel © All rights reserved 2015</h3>
-            </div>
-            <div class="scroll">
-                <a href="#intro" class="smoothScroll">
-                    <span class="me-up"></span>
-                </a>
+                <object data="img/mskraj.svg"  type="image/svg+xml" class="logoMSK">
+                    <img src="img/msk_logo.png" />
+                </object>
             </div>
         </footer>
     </div>

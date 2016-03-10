@@ -1,8 +1,6 @@
 div#contact {
   background: #fff;
 
-
-
   .span-mini-24{
     z-index: 11;
   }
@@ -27,13 +25,22 @@ div#contact {
 
   .brno,.ostrava{
     padding: 15px 5px;
+    .row{
+      margin: 15px 0;
+    }
   }
 
+  .buttons{
+    width: 200px;
+  }
   button{
+    display: inline-block;
     background: #fff;
-    border: 1px solid #a4a4a4;
+    border: 1px solid #DBDBDB;
     color:  #6fbc00;
-    border-radius: 30px;
+    border-radius: 15px;
+    width: 180px;
+    margin: 5px 10px 0 0;
     &:hover{
       background: #6fbc00;
       color: #fff;
@@ -47,7 +54,7 @@ div#contact {
     &:hover{
       color: #6fbc00;
       background: #fff;
-      border: 1px solid #a4a4a4;
+      border: 1px solid #DBDBDB;
     }
   }
 
@@ -55,9 +62,18 @@ div#contact {
 
   /* Small Devices, Tablets */
   @media only screen and (min-width : 768px) {
-    top: -90px;
+    //top: -90px;
+    .buttons{
+      width: 400px;
+    }
     button {
       padding: 10px 0;
+      margin: 25px 8px;
+    }
+    .brno,.ostrava{
+      .row{
+        margin: 0;
+      }
     }
   }
 
