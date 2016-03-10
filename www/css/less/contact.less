@@ -1,5 +1,6 @@
 div#contact {
   background: #fff;
+  z-index: 7;
 
   .span-mini-24{
     z-index: 11;
@@ -31,7 +32,7 @@ div#contact {
   }
 
   .buttons{
-    width: 200px;
+    width: 182px;
   }
   button{
     display: inline-block;
@@ -40,7 +41,7 @@ div#contact {
     color:  #6fbc00;
     border-radius: 15px;
     width: 180px;
-    margin: 5px 10px 0 0;
+    margin: 5px 0 0 0;
     &:hover{
       background: #6fbc00;
       color: #fff;
@@ -58,7 +59,12 @@ div#contact {
     }
   }
 
-
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 480px) {
+    .buttons{
+      width: 365px;
+    }
+  }
 
   /* Small Devices, Tablets */
   @media only screen and (min-width : 768px) {
