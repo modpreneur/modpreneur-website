@@ -1,34 +1,24 @@
-  button{
-    padding: 10px;
-  }
 
-  a {
-    color: #a4a4a4;
-    transition: color 0.5s;
-    &:hover {
-      color: #6fbc00;
-    }
-  }
 
+#intro {
+  height: 100vh;
+  max-height: 670px;
   .head-content {
     position: relative;
     top: 0;
     left: 0;
     display: block;
-    margin: 0 auto;
     width: 100%;
     height: 80px;
     max-width: 1200px;
+    margin: 0 auto;
     .logo {
       position: absolute;
       top: 15px;
       left: 15px;
-      background: transparent;
       z-index: 99;
-      width: 180px;
       height: 50px;
     }
-
     #nav {
       position: fixed;
       top: 20px;
@@ -54,7 +44,7 @@
           height: 32px;
           transition: all 3s;
 
-          .menuRes1,.menuRes2,.menuRes3,.menuRes4{
+          .menuRes1, .menuRes2, .menuRes3, .menuRes4 {
             position: absolute;
             top: 7px;
             left: 5px;
@@ -64,21 +54,21 @@
             background: #ffffff;
             transition: all 0.7s;
           }
-          .menuRes2,.menuRes3{
+          .menuRes2, .menuRes3 {
             top: 15px;
             transition: all 0.7s .2s;
           }
-
-          .menuRes4{
+          .menuRes4 {
             top: 23px;
           }
-
-          &:hover
-          {
+          &:hover {
             background: #6fbc00;
           }
 
-
+        }
+        input[type=checkbox] {
+          display: none !important;
+          opacity: 0;
         }
         ul {
           border-radius: 0;
@@ -114,17 +104,17 @@
             margin-left: -110px;
           }
         }
-        input[type="checkbox"]:checked ~ label{
-          .menuRes1,.menuRes4{
+        input[type="checkbox"]:checked ~ label {
+          .menuRes1, .menuRes4 {
             top: 15px;
             opacity: 0;
           }
-          .menuRes2{
+          .menuRes2 {
             -ms-transform: rotate(405deg) scale(0.9); /* IE 9 */
             -webkit-transform: rotate(405deg) scale(0.9); /* Chrome, Safari, Opera */
             transform: rotate(405deg) scale(0.9);
           }
-          .menuRes3{
+          .menuRes3 {
             -ms-transform: rotate(-225deg) scale(0.9); /* IE 9 */
             -webkit-transform: rotate(-225deg) scale(0.9); /* Chrome, Safari, Opera */
             transform: rotate(-225deg) scale(0.9);
@@ -132,69 +122,91 @@
         }
       }
     }
-
   }
   .scrollMenu #nav .dropdown-main .show-drop {
     background: #6fbc00;
   }
 
-  #intro {
-    background: url('../img/header.jpg') #D8D8D8 50% 0 no-repeat fixed;
-    -webkit-backface-visibility: hidden;
-
-    color: #fff;
-    margin: 0;
-    background-size: cover;
-    top: -2px;
-  }
-
-  #intro .content {
-    margin-top: 0;
-
+  .content {
+    margin-top: 20%;
     h1 {
       color: #fff;
-      font-size: 30px;
-      max-width: none;
+      font-size: 36px;
     }
     h2 {
       color: #a4a4a4;
-      margin: 15px auto;
+      font-size: 18px;
+      margin: 0 30px;
+    }
+    .margin-auto {
+      width: 200px;
     }
   }
-  .bg-scrollMenu {
-    display: none;
+
+  .scroll .me-scroll-down {
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  @-webkit-keyframes Floatingx {
+    from {
+      -webkit-transform: translate(0, 0px);
+    }
+    65% {
+      -webkit-transform: translate(0, 15px);
+    }
+    to {
+      -webkit-transform: translate(0, -0px);
+    }
+  }
+  @-moz-keyframes Floating {
+    from {
+      -moz-transform: translate(0, 0px);
+    }
+    65% {
+      -moz-transform: translate(0, 15px);
+    }
+    to {
+      -moz-transform: translate(0, -0px);
+    }
   }
 
-  @media only screen and (min-height: 400px){
-    #intro .content {
-      margin-top: 50px;
+  @media only screen and (min-width: 480px) {
+    .content {
+      margin-top: 0;
+      h1 {
+        margin-top: 50px;
+      }
     }
   }
 
   /* Small Devices, Tablets */
   @media only screen and (min-width: 768px) {
+
+    .scrollMenu #nav .dropdown-main .show-drop{
+      background: transparent;
+    }
     .head-content #nav {
-      width: 400px;
+      top: 15px;
+      right: 500px;
       .dropdown-main {
-        #dropdown {
-          height: 50px;
-          width: 400px;
-        }
-        input[type=checkbox] {
-          position: absolute;
-          top: -9999px;
-          left: -9999px;
-        }
         label {
-          display: none;
-          margin: 0;
+          [class*="menuRes"] {
+            display: none;
+            opacity: 0;
+          }
         }
         ul {
+          top: 0;
           visibility: visible;
           opacity: 1;
-          width: 100%;
+          min-width: 500px;
           height: auto;
-          top: 0;
           right: 0;
           background: transparent;
           box-shadow: none;
@@ -227,7 +239,7 @@
       z-index: 99;
       display: block;
       width: 100%;
-      height: 50px;
+      height: 35px;
     }
 
     .bg-scrollMenuON {
@@ -240,34 +252,85 @@
 
     .scrollMenu {
       #nav {
-          top: 0;
-
+        top: 0;
         .dropdown-main ul li a {
+          padding: 5px 5px 0 5px;
           color: #d3d3d3;
         }
-
       }
     }
-
-
     input[type=checkbox]:checked ~ #dropdown {
       margin-left: 0;
     }
-
-    #intro .content h1 {
+    .content h1 {
       font-size: 36px;
     }
 
   }
+  @media only screen and (min-width: 1200px) {
+    .head-content{
+      #nav{
+        right: auto;
+        left: 50%;
+        #dropdown{
+          margin-top: 20px;
+          li{
+            margin-left: 40px;
+          }
+        }
+      }
+      .logo{
+        top: 25px;
+        height: 70px;
+      }
+    }
+    .content{
+      h1{
+        font-size: 62px;
+        margin-top: 120px;
+      }
+      h2{
+        font-size: 22px;
+        line-height: 39px;
+      }
+      .margin-auto{
+        width: 300px;
+      }
+      .button{
+        width: 300px;
+        padding: 15px 0;
+        margin: 45px 0 20px 0;
+      }
+    }
+    .scrollMenu {
+      #nav {
+        top: 0;
+        #dropdown{
+          margin-top: 0;
+        }
+        .dropdown-main ul li a {
+          padding: 5px 5px 0 5px;
+          color: #d3d3d3;
+        }
+      }
+    }
+  }
 
-  /* Medium Devices, Desktops */
+}
+/*
+  !* Medium Devices, Desktops *!
   @media only screen and (min-width: 992px) {
+
+    #intro .scroll{
+      bottom: 150px;
+    }
     .head-content #nav {
       left:50%;
-      top: 10px;
+      top: 0;
       width: 500px;
       .dropdown-main {
         #dropdown{
+          top: 40px;
           width: 500px;
         }
         ul {
@@ -283,8 +346,20 @@
     }
   }
 
-  /* Large Devices, Wide Screens */
+  !* Large Devices, Wide Screens *!
   @media only screen and (min-width: 1200px) {
+
+    .bgHead{
+      img{
+        height: 600px;
+      }
+    }
+    #intro{
+      height: 670px;
+    }
+    #intro button{
+      padding: 20px;
+    }
 
     .head-content #nav {
       .dropdown-main {
@@ -294,8 +369,10 @@
         }
         ul {
           li {
+            margin-left: 60px;
             a {
-              padding: 15px 10px 0 10px;
+              font-size: 16px;
+              padding: 0;
             }
           }
         }
@@ -304,12 +381,12 @@
     .scrollMenu #nav {
       .dropdown-main {
         #dropdown {
-          width: 500px;
+          width: 600px;
         }
         ul {
           li {
             a {
-              padding: 10px 10px 0px 8px;
+              padding: 0;
             }
           }
         }
@@ -321,9 +398,8 @@
     }
 
     .head-content .logo {
-      top: 0;
-      width: 255px;
-      height: 100px;
+      top: 10px;
+      height: 70px;
     }
 
     #intro .content h1 {
@@ -337,7 +413,7 @@
     .head-content {
       #nav {
         .dropdown-main ul {
-          top: 10px;
+          //top: 10px;
         }
       }
     }
@@ -356,13 +432,11 @@
 
     .head-content #nav .dropdown-main #dropdown {
       position: fixed;
-      width: 500px;
+      width: 600px;
       left: 50%;
-      //margin-left: -400px;
-
     }
 
-  }
+  }*/
 
 
 

@@ -3,20 +3,24 @@
 
 div#career {
   background: #f2f2f2;
+  height: 100vh;
 
-  h2{
+  h1 {
+    text-align: left;
+  }
+  h2 {
     color: #727272;
     font-size: 18px;
     text-align: center;
   }
-
-  .span-mini-24{
-    z-index: 5;
+  .scroll{
+    bottom: 0;
   }
 
   .harmonica {
-    margin-top: 5px;
+    margin: 35px auto 0 auto;
     background: transparent;
+    max-width: 900px;
     .show-harmonica {
       padding: 5px 15px;
       text-align: justify;
@@ -24,14 +28,13 @@ div#career {
       font-size: 12px;
       color: #000;
     }
-
     .main-panel {
       border: 1px solid #d9d9d9;
       border-radius: 5px;
 
-      -webkit-transition: all 0.6s cubic-bezier(.25,.46,.45,.94);
-      -moz-transition: all 0.6s cubic-bezier(.25,.46,.45,.94);
-      transition: all 0.6s cubic-bezier(.25,.46,.45,.94);
+      -webkit-transition: all 0.6s cubic-bezier(.25, .46, .45, .94);
+      -moz-transition: all 0.6s cubic-bezier(.25, .46, .45, .94);
+      transition: all 0.6s cubic-bezier(.25, .46, .45, .94);
       label[for^="harmonica"] {
         font-family: 'ProximaNova-Regular', sans-serif;
         color: #6fbc00;
@@ -55,10 +58,10 @@ div#career {
     }
   }
 
-  input[id^="harmonica"]:checked + .main-panel{
-    -webkit-transition: all 0.6s cubic-bezier(.25,.46,.45,.94);
-    -moz-transition: all 0.6s cubic-bezier(.25,.46,.45,.94);
-    transition: all 0.6s cubic-bezier(.25,.46,.45,.94);
+  input[id^="harmonica"]:checked + .main-panel {
+    -webkit-transition: all 0.6s cubic-bezier(.25, .46, .45, .94);
+    -moz-transition: all 0.6s cubic-bezier(.25, .46, .45, .94);
+    transition: all 0.6s cubic-bezier(.25, .46, .45, .94);
     label[for^="harmonica"] {
       color: #6fbc00;
       text-align: left;
@@ -69,76 +72,85 @@ div#career {
       }
     }
   }
-}
 
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-  .small-hidden{
-    display: inline;
-  }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
-  div#career .sm-hide{
-    display: block;
-    margin: 15px;
-  }
-  div#career .harmonica {
-    .show-harmonica{
-      font-size: 14px;
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width: 480px) {
+    height: auto;
+    min-height: 500px;
+    h1{
+      text-align: center;
     }
-    .main-panel{
-      margin-bottom: 6px;
-      min-height: 49px;
-      label[for^=harmonica]{
-        padding: 15px;
-        &:before {
-          top: 15px;
+
+    .small-hidden {
+      display: inline;
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width: 768px) {
+
+    .sm-hide {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      margin: 15px;
+    }
+    .button{
+      width: 300px;
+      margin: 60px auto;
+      padding: 15px;
+    }
+
+    .harmonica {
+      .show-harmonica {
+        font-size: 14px;
+      }
+      .main-panel {
+        margin-bottom: 6px;
+        min-height: 49px;
+        label[for^=harmonica] {
+          padding: 15px;
+          &:before {
+            top: 15px;
+          }
         }
       }
     }
+
   }
 
-}
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-}
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 1200px) {
-
-  div#career h2{
-    font-size: 21px;
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width: 992px) {
   }
-  div#career .harmonica {
-    .show-harmonica{
-      font-size: 16px;
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width: 1200px) {
+
+    min-height: 900px;
+     h2 {
+      font-size: 21px;
     }
-    .main-panel{
-      margin-bottom: 10px;
-      min-height: 60px;
-      label[for^=harmonica]{
-        font-size: 22px;
-        padding: 17px;
-        &:before {
+    .harmonica {
+      .show-harmonica {
+        font-size: 16px;
+        padding: 10px 50px 10px 15px;
+      }
+      .main-panel {
+        margin-bottom: 10px;
+        min-height: 60px;
+        label[for^=harmonica] {
           font-size: 22px;
-          top: 15px;
-          right: 10px;
+          padding: 17px;
+          &:before {
+            font-size: 22px;
+            top: 15px;
+            right: 10px;
+          }
         }
       }
     }
   }
-}
 
+}
 
 
 

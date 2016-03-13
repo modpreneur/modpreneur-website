@@ -49,22 +49,22 @@ $(document).ready(function () {
 
     //first transition for section
     var c = document.getElementById("myCanvas1");
-    c.style.height ='200px';
-    c.style.bottom = "-1px";
+    c.style.height ='250px';
+    //c.style.bottom = "0px";
    // c.style.backgroundColor = '#fff';
     var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.fillStyle="transparent";
     ctx.strokeStyle="#fff";
-    ctx.lineWidth="80";
-    ctx.translate(20,0);
-    ctx.arc(10,0,130,0,1.5*Math.PI);
+    ctx.lineWidth=90;
+    //ctx.translate(-15,0);
+    ctx.arc(25,-5,135,0*Math.PI,2*Math.PI);
     ctx.fill();
     ctx.stroke();
 
     //dvojka
     var c2 = document.getElementById("myCanvas2");
-    c2.style.height ='300px';
+    c2.style.height ='250px';
     var ctx2 = c2.getContext("2d");
     ctx2.beginPath();
     ctx2.fillStyle="#F2F2F2";
@@ -75,7 +75,7 @@ $(document).ready(function () {
 
     //trojka
     var c3 = document.getElementById("myCanvas3");
-    c3.style.height ='300px';
+    c3.style.height ='200px';
     var ctx3 = c3.getContext("2d");
     ctx3.beginPath();
     ctx3.translate(10,0);

@@ -1,5 +1,6 @@
 #maps{
-
+height: 100vh;
+  background: #fff;
   #myCanvas4{
     top:0;
     bottom:auto;
@@ -7,21 +8,15 @@
 
   #mapOstrava,#mapBrno{
     width: 100%;
-    height: 100vh;
+    height: 90%;
+    max-height: 550px;
     z-index: 5;
 
     position: absolute;
-    top: 45px;
+    top: 0;
     left: 0;
   }
 
-  #mapOstrava{
-    background-image: url("../img/mapOstrava.jpg") 50% 0 no-repeat;
-  }
-
-  #mapBrno{
-    background-image: url("../img/mapBrno.jpg");
-  }
 
   footer{
     position: absolute;
@@ -29,7 +24,7 @@
 
     width: 100%;
     height: 100px;
-    background: #252525;
+    background: #4b4b4b;
     z-index: 999;
     .logoMSK{
       margin: 5px 0;
@@ -40,12 +35,14 @@
     h3{
       display: block;
       font-size: 12px;
+      color: #fff;
     }
     .container{
       margin: 15px auto;
       width: 100%;
     }
   }
+
 
   h1{
     color: #000;
@@ -67,6 +64,11 @@
     }
 
   }
+  @media only screen and (min-height: 321px) {
+    #mapOstrava,#mapBrno{
+      height: 90vh;
+    }
+  }
 
   /* Extra Small Devices, Phones */
   @media only screen and (min-width: 480px) {
@@ -75,43 +77,42 @@
       h3 {
       font-size: 14px;
       }
-
     }
   }
 
 
   @media only screen and (min-width: 768px) {
-    height: 600px !important;
-
+    height: 600px ;
     #mapOstrava,#mapBrno{
       width: 100%;
       height: 500px;
       z-index: 5;
     }
-    footer{
-      top: 450px;
-      h3 {
-        margin-top: 40px;
-        margin-left: 100px;
-        font-size: 16px;
-        display: inline-block;
-        float: right;
-       }
-      .logoMSK{
-        margin: 15px 0;
-        height: 70px;
-        width:auto;
-        display: block;
-        float: left;
-      }
-      .container{
-        margin: 0 auto;
-        width: 1200px;
-      }
-
-    }
 }
 
-
+  @media only screen and (min-width: 992px) {
+    footer{
+      top: 450px;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    footer{
+      height: 120px;
+      h3{
+        font-size: 16px;
+        line-height: 95px;
+        float: right;
+        display: inline-block;
+        &:first-child{
+          margin-left: 100px;
+        }
+      }
+      .logoMSK{
+        margin: 10px 0;
+        width: auto;
+        height: 65px;
+      }
+    }
+  }
 }
 
