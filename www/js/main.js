@@ -49,7 +49,6 @@ $(document).ready(function () {
 
     //first transition for section
     var c = document.getElementById("myCanvas1");
-    c.style.height ='250px';
     //c.style.bottom = "0px";
    // c.style.backgroundColor = '#fff';
     var ctx = c.getContext("2d");

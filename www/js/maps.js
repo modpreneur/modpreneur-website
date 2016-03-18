@@ -95,8 +95,8 @@ function init() {
     var markerOstrava = new google.maps.Marker({
         position: cordiOstrava,
         map: mapOstrava,
-        icon: 'img/wvMAPicon.png',
-        title: 'Webvalley'
+        icon: 'img/meMAPicon.png',
+        title: 'Modern Enterpreneur'
     });
 
 

@@ -11,6 +11,7 @@
     text-align: center;
   }
   .product-items {
+    padding-bottom: 100px;
     margin-top: 10px;
     h2, h3 {
       text-align: left;
@@ -36,6 +37,9 @@
         background: #e4e4e4;
       }
     }
+  }
+  .scroll{
+    bottom: 75px;
   }
 
   @media only screen and (min-width: 480px){
@@ -88,6 +92,7 @@
   @media only screen and (min-width: 1200px) {
     .product-items {
       margin-top: 100px;
+      padding-bottom: 50px;
       .row {
         min-height: 250px;
         padding: 0;
@@ -110,137 +115,11 @@
         }
       }
     }
+    .scroll{
+      bottom: 100px;
+    }
 
 
   }
 
-  /*!* Extra Small Devices, Phones *!
-  @media only screen and (min-width: 480px) and (min-height: 420px) {
-    height: 140vh;
-    max-height: 900px;
-    .product-items {
-      margin-top: 10px;
-      h2, h3 {
-        margin-left: 10px;
-      }
-      .row {
-        &:after {
-          left: 10%;
-          width: 85%;
-        }
-      }
-    }
-  }
-
-  !* Small Devices, Tablets *!
-  @media only screen and (min-width: 768px) {
-    max-height: 100vh;
-    h2 {
-      margin: 0 10px;
-    }
-
-    .product-items .row {
-      min-height: 115px;
-      &:after {
-        display: none;
-      }
-    }
-
-    .product-items {
-      h2, h3 {
-        text-align: left;
-        margin-left: 20px;
-      }
-    }
-
-  }
-  !* Medium Devices, Desktops *!
-  @media only screen and (min-width: 900px) {
-    h2 {
-      margin: 0;
-      font-size: 21px;
-    }
-
-    h2, h3 {
-      margin-left: 10px;
-    }
-  }
-
-  !* Medium Devices, Desktops *!
-  @media only screen and (min-width: 1200px) {
-    h2 {
-      margin: 0;
-      font-size: 21px;
-    }
-
-    .product-items {
-      h2, h3 {
-        margin-left: 10px;
-      }
-      h2 {
-        font-size: 27px;
-      }
-      h3 {
-        font-size: 17px;
-      }
-      .row {
-        margin: 40px 0;
-      }
-      [class^="me-"] {
-        font-size: 50px;
-        width: 50px;
-        height: 50px;
-      }
-    }
-  }
-
-  !* Extra Small Devices, Phones *!
-  @media only screen and (min-width: 380px) {
-    .product-items [class^="me-"] {
-      font-size: 50px;
-      width: 50px;
-      height: 50px;
-    }
-  }
-
-  !* Extra Small Devices, Phones *!
-  @media only screen and (min-width: 480px) {
-    .product-items [class^="me-"], .product-items [class*=" me-"] {
-      font-size: 55px;
-      width: 55px;
-      height: 55px;
-    }
-  }
-
-  !* Small Devices, Tablets *!
-  @media only screen and (min-width: 768px) {
-
-    .product-items [class^="me-"], .product-items [class*=" me-"], #contact [class^="me-"], #contact [class*=" me-"] {
-      font-size: 60px;
-      width: 60px;
-      height: 60px;
-    }
-  }
-
-  !* Medium Devices, Desktops *!
-  @media only screen and (min-width: 992px) {
-
-    .product-items [class^="me-"], .product-items [class*=" me-"] {
-      font-size: 70px;
-      width: 70px;
-      height: 70px;
-    }
-
-  }
-
-  !* Large Devices, Wide Screens *!
-  @media only screen and (min-width: 1200px) {
-
-    .product-items [class^="me-"], .product-items [class*=" me-"] {
-      font-size: 90px;
-      width: 90px;
-      height: 90px;
-    }
-
-  }*/
 }
