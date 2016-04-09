@@ -16,9 +16,6 @@ window.onload = function () {
     }
 };
 
-
-
-
 $(document).ready(function () {
 
     $(document).on("scroll", onScroll);
@@ -47,32 +44,30 @@ $(document).ready(function () {
         $('#nav input').prop( "checked", false );
     });
 
-    //first transition for section
+    //First canvas between header and products
+    //Height is set by css for media queries
     var c = document.getElementById("myCanvas1");
-    //c.style.bottom = "0px";
-   // c.style.backgroundColor = '#fff';
     var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.fillStyle="transparent";
     ctx.strokeStyle="#fff";
     ctx.lineWidth=90;
-    //ctx.translate(-15,0);
     ctx.arc(25,-5,135,0*Math.PI,2*Math.PI);
     ctx.fill();
     ctx.stroke();
 
-    //dvojka
+    //Second - products and career
     var c2 = document.getElementById("myCanvas2");
     c2.style.height ='250px';
     var ctx2 = c2.getContext("2d");
     ctx2.beginPath();
     ctx2.fillStyle="#F2F2F2";
     ctx2.strokeStyle="transparent";
-    ctx2.arc(100,250,150,1*Math.PI,0*Math.PI)
+    ctx2.arc(100,250,150,1*Math.PI,0*Math.PI);
     ctx2.fill();
     ctx2.stroke();
 
-    //trojka
+    //Third between career and concat
     var c3 = document.getElementById("myCanvas3");
     c3.style.height ='200px';
     var ctx3 = c3.getContext("2d");
@@ -84,7 +79,7 @@ $(document).ready(function () {
     ctx3.fill();
     ctx3.stroke();
 
-    //4
+    //Last for top of maps
     var c4 = document.getElementById("myCanvas4");
     c4.style.height ='100px';
     c4.style.zIndex = '6';
@@ -98,18 +93,18 @@ $(document).ready(function () {
 
     $('#brnBtn').on('click', function (){
         $('.ostrava').addClass('hide');
-        $('#mapOstrava').addClass('hide');
+        $('#mapOstrava').addClass('hideM');
         $('.brno').removeClass('hide');
-        $('#mapBrno').removeClass('hide');
+        $('#mapBrno').removeClass('hideM');
         $('#contact #ovaBtn').removeClass('btnON');
         $(this).addClass('btnON');
     });
 
     $('#ovaBtn').on('click', function (){
         $('.ostrava').removeClass('hide');
-        $('#mapOstrava').removeClass('hide');
+        $('#mapOstrava').removeClass('hideM');
         $('.brno').addClass('hide');
-        $('#mapBrno').addClass('hide');
+        $('#mapBrno').addClass('hideM');
         $('#contact #brnBtn').removeClass('btnON');
         $(this).addClass('btnON');
     });
@@ -129,7 +124,6 @@ function onScroll(event){
         else{
             currLink.removeClass("active");
         }
-
 
     });
 

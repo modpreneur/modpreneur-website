@@ -3,25 +3,23 @@
 
 div#career {
   background: #f2f2f2;
-  //height: 100vh;
-
   h2 {
     color: #a4a4a4;
-    font-size: 18px;
     text-align: center;
   }
   .scroll{
-    bottom: 100px;
+    margin-left: -20px;
+    bottom: 70px;
   }
 
   .harmonica {
     margin: 35px auto 0 auto;
     background: transparent;
     max-width: 900px;
-    min-height: 320px;
+    min-height: 400px;
     .show-harmonica {
       padding: 5px 15px;
-      text-align: justify;
+      //text-align: justify;
       background: transparent;
       font-size: 12px;
       color: #000;
@@ -29,6 +27,7 @@ div#career {
     .main-panel {
       border: 1px solid #d9d9d9;
       border-radius: 5px;
+      margin-bottom: 5px;
 
       -webkit-transition: all 0.4s cubic-bezier(.25, .46, .45, .94);
       -moz-transition: all 0.4s cubic-bezier(.25, .46, .45, .94);
@@ -47,10 +46,13 @@ div#career {
           right: 6px;
 
           font-family: 'meIcons';
-          content: "\e924";
+          content: "\e923";
           font-size: 18px;
           border: none;
           background: transparent;
+        }
+        &:hover:before{
+          color: #6fbc00;
         }
       }
     }
@@ -64,45 +66,46 @@ div#career {
       color: #6fbc00;
       text-align: left;
       position: relative;
-      //background: #e8e8e8;;
       &:before {
-        content: "\e923";
+        content: "\e924";
       }
     }
   }
-  .content{
-    padding-bottom: 100px;
-  }
 
-  /* Extra Small Devices, Phones */
+
   @media only screen and (min-width: 480px) {
     height: auto;
     min-height: 500px;
     h1{
       text-align: center;
     }
-
     .small-hidden {
       display: inline;
     }
+    .scroll{
+      bottom: 90px;
+    }
   }
 
-  /* Small Devices, Tablets */
   @media only screen and (min-width: 768px) {
-
+    padding-bottom: 40px;
     .sm-hide {
       display: block;
       opacity: 1;
       visibility: visible;
       margin: 15px;
     }
+    .scroll span{
+      display: none;
+    }
     .button{
       width: 300px;
-      margin: 0 auto 170px auto;
+      margin: 0 auto 70px auto;
       padding: 15px;
     }
 
     .harmonica {
+      min-height: 350px;
       .show-harmonica {
         font-size: 14px;
       }
@@ -120,12 +123,10 @@ div#career {
 
   }
 
-  /* Medium Devices, Desktops */
   @media only screen and (min-width: 992px) {
   }
-  /* Medium Devices, Desktops */
   @media only screen and (min-width: 1200px) {
-    min-height: 1050px;
+    min-height: 980px;
      h2 {
       font-size: 21px;
     }
@@ -133,7 +134,7 @@ div#career {
       bottom: 170px;
     }
     .harmonica {
-      min-height: 460px;
+      min-height: 500px;
       .show-harmonica {
         font-size: 16px;
         padding: 0 50px 28px 28px;

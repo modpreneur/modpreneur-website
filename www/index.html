@@ -2,6 +2,7 @@
 <html lang="cs">
 
 <head>
+    <title>Moderní podnikatel</title>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -13,36 +14,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
-    <title>Moderní Podnikatel</title>
     <meta name="description" content="Vývoj webu, softwaru, mobilních aplikací včetně designu, user testingu, split-testingu, analýza dat a business konzultací přesně podle vašich představ.">
-    <link rel="canonical" href="http://88.146.49.119:8080/html/modernipodnikatel/">
+    <link rel="canonical" href="http://www.modernipodnikatel.cz">
 
     <!--Open Graph-->
-    <meta property="og:image" content="http://88.146.49.119:8080/html/modernipodnikatel/img/metaIcon.jpg">
+    <meta property="og:image" content="http://www.modernipodnikatel.cz/img/metaIcon.jpg">
     <meta property="og:title" content="Moderní Podnikatel - Vytvoříme web, který vám bude vydělávat">
     <meta property="og:description" content="Vývoj webu, softwaru, mobilních aplikací včetně designu, user testingu, split-testingu, analýza dat a business konzultací přesně podle vašich představ.">
     <!--<meta property="og:image:type" content="image/png">-->
     <!--<meta property="og:image:width" content="283">-->
     <!--<meta property="og:image:height" content="283">-->
-    <meta property="og:url" content="http://88.146.49.119:8080/html/modernipodnikatel/">
+    <meta property="og:url" content="http://www.modernipodnikatel.cz">
     <meta property="og:type" content="website">
     <meta property="fb:admins" content="modpreneur">
 
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="MODERNÍ PODNIKATEL - Vytvoříme web, který vám bude vydělávat">
     <meta itemprop="description" content="Vývoj webu, softwaru, mobilních aplikací včetně designu, user testingu, split-testingu, analýza dat a business konzultací přesně podle vašich představ.">
-    <meta itemprop="image" content="http://88.146.49.119:8080/html/modernipodnikatel/img/metaIcon.jpg">
+    <meta itemprop="image" content="http://www.modernipodnikatel.cz/img/metaIcon.jpg">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@modpreneur">
     <meta name="twitter:creator" content="@modpreneur">
-    <meta property="og:url" content="http://88.146.49.119:8080/html/modernipodnikatel/">
+    <meta property="og:url" content="http://www.modernipodnikatel.cz">
     <meta property="og:title" content="MODERNÍ PODNIKATEL - Vytvoříme web, který vám bude vydělávat">
     <meta property="og:description" content="Vývoj webu, softwaru, mobilních aplikací včetně designu, user testingu, split-testingu, analýza dat a business konzultací přesně podle vašich představ.">
-    <meta property="og:image" content="http://88.146.49.119:8080/html/modernipodnikatel/img/metaTwitter.jpg">
+    <meta property="og:image" content="http://www.modernipodnikatel.cz/img/metaTwitter.jpg">
 
-    <!--Favicons-->
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
@@ -65,22 +65,21 @@
     <meta name="theme-color" content="#ffffff">
 
     <!--Stylesheet with bowtie-->
-    <link rel="stylesheet" href="css/bowtie.css">
+    <link rel="stylesheet" href="css/bowtie.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Moderní podnikatel</title>
 </head>
 
 <body>
 <div class="container-fluid">
 
     <div class="bgHead">
-        <img src="img/header.png" alt="">
+        <img src="img/header.png"
+             srcset=" img/header.png, img/header@2x.png 2x"
+             alt="">
     </div>
 
     <div id="intro" class="section">
         <canvas id="myCanvas1" width='100'></canvas>
-
 
         <div class="head-content">
             <object data="img/logo.svg"  type="image/svg+xml" class="logo">
@@ -89,7 +88,6 @@
 
             <div id="nav">
                 <div class="dropdown-main">
-
                     <input type="checkbox" id="show-menu" role="button">
                     <label for="show-menu" class="show-drop">
                         <span id="menuRes1" class="menuRes1"></span>
@@ -112,8 +110,8 @@
         <div class="content row">
             <div class="span-mini-24">
                 <h1>Vyladěná řešení pro podnikatele</h1>
-                <h2>Moderní řešení pramení z kvalitních produktů, na které se můžete spolehnout.</h2>
-                <h2>Přejděte od snů k vytoužené cestě za růstem byznysu.</h2>
+                <h2>Moderní řešení pramení z kvalitních produktů, na které se můžete spolehnout. </br>
+                    Přejděte od snů k vytoužené cestě za růstem byznysu.</h2>
 
                 <div class="margin-auto">
                     <a href="#products" class="smoothScroll button">
@@ -271,7 +269,7 @@
         <canvas id="myCanvas3" width='100'></canvas>
 
         <div class="content row">
-            <div class="span-mini-24">
+            <div class="span-mini-24 row">
                 <h1>Perfektní místo pro start kariéry</h1>
                 <span class="line"></span>
                 <h2>
@@ -279,65 +277,65 @@
                     Odstartujte svou kariéru se zkušenými kolegy, kteří vás
                     provedou začátky a zapojí do týmu.
                 </h2>
-                    <div class="harmonica">
-                        <input type="radio" id="harmonica-01" name="list">
-                        <div class="main-panel">
-                            <label for="harmonica-01">Perfect JS Programátor</label>
-                            <div class="show-harmonica">
-                                Zkusili jste někdy kouzlit bez kouzelné hůlky,
-                                nebo se pohybovat v čase rychlosti světla? I
-                                slovy magie lze popsat práce těch nehlepších
-                                z oboru. Představte si vymazlený kód, který
-                                svou precizností předčí učebnicové příklady a
-                                hlavně výsledky, kterými se budete chlubit před
-                                přáteli.
-                            </div>
-                        </div>
-
-                        <input type="radio" id="harmonica-02" name="list">
-                        <div class="main-panel">
-                            <label for="harmonica-02">SuperHero PHP Programátor</label>
-                            <div class="show-harmonica">
-                                Zkusili jste někdy kouzlit bez kouzelné hůlky,
-                                nebo se pohybovat v čase rychlosti světla? I
-                                slovy magie lze popsat práce těch nehlepších
-                                z oboru. Představte si vymazlený kód, který
-                                svou precizností předčí učebnicové příklady a
-                                hlavně výsledky, kterými se budete chlubit před
-                                přáteli.
-                            </div>
-                        </div>
-
-                        <input type="radio" id="harmonica-03" name="list" checked>
-                        <div class="main-panel">
-                            <label for="harmonica-03">Ninja CSS Kóder</label>
-                            <div class="show-harmonica">
-                                <div class="small-hidden">
-                                    Zkusili jste někdy kouzlit bez kouzelné hůlky,
-                                    nebo se pohybovat v čase rychlosti světla? I
-                                    slovy magie lze popsat práce těch nehlepších
-                                    z oboru.
-                                </div>
-                                Představte si vymazlený kód, který
-                                svou precizností předčí učebnicové příklady a
-                                hlavně výsledky, kterými se budete chlubit před
-                                přáteli. Takové schopnosti potřebujeme pro naše
-                                projekty a rádi tyto zkušenosti předáme i méně
-                                pokročilým kouzelníkům s HTML a CSS kódem. Stačí nám napsat.
-                            </div>
+                <div class="harmonica">
+                    <input type="radio" id="harmonica-01" name="list">
+                    <div class="main-panel">
+                        <label for="harmonica-01">Perfect JS Programátor</label>
+                        <div class="show-harmonica">
+                            Zkusili jste někdy kouzlit bez kouzelné hůlky,
+                            nebo se pohybovat v čase rychlosti světla? I
+                            slovy magie lze popsat práce těch nehlepších
+                            z oboru. Představte si vymazlený kód, který
+                            svou precizností předčí učebnicové příklady.
                         </div>
                     </div>
-                    <a href="#contact" class="sm-hide smoothScroll button">
-                       chci více informací
+
+                    <input type="radio" id="harmonica-02" name="list">
+                    <div class="main-panel">
+                        <label for="harmonica-02">SuperHero PHP Programátor</label>
+                        <div class="show-harmonica">
+                            Zkusili jste někdy kouzlit bez kouzelné hůlky,
+                            nebo se pohybovat v čase rychlosti světla? I
+                            slovy magie lze popsat práce těch nehlepších
+                            z oboru. Představte si vymazlený kód, který
+                            svou precizností předčí učebnicové příklady a
+                            hlavně výsledky, kterými se budete chlubit před
+                            přáteli.
+                        </div>
+                    </div>
+
+                    <input type="radio" id="harmonica-03" name="list" checked>
+                    <div class="main-panel">
+                        <label for="harmonica-03">Ninja CSS Kóder</label>
+                        <div class="show-harmonica">
+                            <div class="small-hidden">
+                                Zkusili jste někdy kouzlit bez kouzelné hůlky,
+                                nebo se pohybovat v čase rychlosti světla? I
+                                slovy magie lze popsat práce těch nehlepších
+                                z oboru.
+                            </div>
+                            Představte si vymazlený kód, který
+                            svou precizností předčí učebnicové příklady a
+                            hlavně výsledky, kterými se budete chlubit před
+                            přáteli. Takové schopnosti potřebujeme pro naše
+                            projekty a rádi tyto zkušenosti předáme i méně
+                            pokročilým kouzelníkům s HTML a CSS kódem. Stačí nám napsat.
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="sm-hide smoothScroll button">
+                    chci více informací
+                </a>
+                <div class="scroll">
+                    <a href="#contact" class="smoothScroll">
+                        <span class="me-scroll-down"></span>
                     </a>
+                </div>
             </div>
+
         </div>
 
-        <div class="scroll">
-            <a href="#contact" class="smoothScroll">
-                <span class="me-scroll-down"></span>
-            </a>
-        </div>
+
 
     </div>
 
@@ -362,99 +360,98 @@
                 </div>
             </div>
 
-            <div class="row ostrava hide">
-                <div class="span-none-padding-mini-24 span-small-12 span-medium-12">
-                    <div class="row">
-                        <!--icon-->
-                        <div class="span-none-padding-mini-6 span-none-padding-medium-4">
-                            <span class="me-map-icon">
-                                <span class="path1"></span>
-                                <span class="path2"></span>
-                                <span class="path3"></span>
-                            </span>
+            <div class="span-mini-24 span-none-padding-large-24 row contact-contianer">
+                <div class="relative">
+                    <div class="ostrava hide">
+                        <div class="span-none-padding-mini-24 span-small-11 span-medium-11">
+                            <div class="row">
+                                <!--icon-->
+                                <div class="span-none-padding-mini-5 span-none-padding-small-4 span-none-padding-medium-4">
+                    <span class="me-map-icon">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                        <span class="path3"></span>
+                    </span>
+                                </div>
+                                <!--text-->
+                                <div class="span-none-padding-mini-18 span-none-padding-small-20 span-none-padding-medium-20 company">
+                                    <h2>Adresa společnosti</h2>
+                                    <h2 class="gr">Modern Entrepreneur s.r.o.</h2>
+                                    <h3>Pohraniční 504/27</h3>
+                                    <h3>Ostrava - Vítkovice, 703 00</h3>
+                                    <h3>Bílá budova, 4. Patro</h3>
+                                    <h3>IČO:	02625041</h3>
+                                </div>
+                            </div>
                         </div>
-                        <!--text-->
-                        <div class="span-none-padding-mini-18 span-none-padding-medium-20">
-                            <h2>Adresa společnosti</h2>
-                            <h2 class="gr">Modern Entrepreneur s.r.o.</h2>
-                            <h3>Pohraniční 504/27</h3>
-                            <h3>Ostrava - Vítkovice, 703 00</h3>
-                            <h3>Bílá budova, 4. Patro</h3>
-                            <h3>IČO:	02625041</h3>
+                        <!--<div class="span-medium-2"></div>-->
+                        <div class="span-none-padding-mini-24 span-small-12 span-medium-12">
+                            <div class="row">
+                                <!--icon-->
+                                <div class="span-none-padding-mini-5 span-none-padding-small-4 span-none-padding-medium-4">
+                                <span class="me-user">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </span>
+                                </div>
+                                <!--text-->
+                                <div class="span-none-padding-mini-18 span-none-padding-small-20 span-none-padding-medium-20 person">
+                                    <h2>Kontaktní osoba</h2>
+                                    <h2><p class="gr">Tomáš Jančar</p></h2>
+                                    <h3>E-mail: <a href="mailto:jancar@modpreneur.com">jancar@modpreneur.com</a></h3>
+                                    <h3>Telefon: <a href="tel:+420 778 535 817">+420 725 657 989</a></h3>
+                                    <h3>Na příjmu: Po–Pá, 8–17 hod.</h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="span-medium-2"></div>
-                <div class="span-none-padding-mini-24 span-small-12 span-medium-12">
-                    <div class="row">
-                        <!--icon-->
-                        <div class="span-none-padding-mini-6 span-none-padding-medium-4">
-                            <span class="me-user">
-                                <span class="path1"></span>
-                                <span class="path2"></span>
-                            </span>
+                    <div class="brno">
+                        <div class="span-none-padding-mini-24 span-small-11 span-medium-11">
+                            <div class="row">
+                                <!--icon-->
+                                <div class="span-none-padding-mini-5 span-none-padding-small-4 span-none-padding-medium-4">
+                    <span class="me-map-icon">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                        <span class="path3"></span>
+                    </span>
+                                </div>
+                                <!--text-->
+                                <div class="span-none-padding-mini-18 span-none-padding-small-20 span-none-padding-medium-20 company">
+                                    <h2>Adresa společnosti</h2>
+                                    <h2 class="gr">Modern Entrepreneur s.r.o.</h2>
+                                    <h3>Bohunická 595/85</h3>
+                                    <h3>Brno - Horní Heršpice, 619 00</h3>
+                                    <h3>Jihomoravský kraj</h3>
+                                    <h3>IČO:	02625041</h3>
+                                </div>
+                            </div>
                         </div>
-                        <!--text-->
-                        <div class="span-none-padding-mini-18 span-none-padding-medium-20">
-                            <h2>Kontaktní osoba</h2>
-                            <h2> <p class="gr">Tomáš Jančar</p> Dev Team Leader</h2>
-                            <h3>E-mail: <a href="mailto:jancar@modpreneur.com">jancar@modpreneur.com</a></h3>
-                            <h3>Telefon: <a href="tel:+420 778 535 817">+420 725 657 989</a></h3>
-                            <h3>Na příjmu: Po–Pá, 8–17 hod.</h3>
+                        <!--<div class="span-medium-2"></div>-->
+                        <div class="span-none-padding-mini-24 span-small-12 span-medium-12">
+                            <div class="row">
+                                <!--icon-->
+                                <div class="span-none-padding-mini-5 span-none-padding-small-4 span-none-padding-medium-4">
+                    <span class="me-user">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                    </span>
+                                </div>
+                                <!--text-->
+                                <div class="span-none-padding-mini-18 span-none-padding-small-20 span-none-padding-medium-20 person">
+                                    <h2>Kontaktní osoba</h2>
+                                    <h2><p class="gr">Martin Kolek</p></h2>
+                                    <h3>E-mail: <a href="mailto:kolek@modpreneur.com">kolek@modpreneur.com</a></h3>
+                                    <h3>Telefon: <a href="tel:+420 778 535 817">+420 778 535 817</a></h3>
+                                    <h3>Na příjmu: Po–Pá, 8–17 hod.</h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row brno">
-                <div class="span-none-padding-mini-24 span-small-12 span-medium-12">
-                    <div class="row">
-                        <!--icon-->
-                        <div class="span-none-padding-mini-6 span-none-padding-medium-4">
-                            <span class="me-map-icon">
-                                <span class="path1"></span>
-                                <span class="path2"></span>
-                                <span class="path3"></span>
-                            </span>
-                        </div>
-                        <!--text-->
-                        <div class="span-none-padding-mini-18 span-none-padding-medium-20">
-                            <h2>Adresa společnosti</h2>
-                            <h2 class="gr">Modern Entrepreneur s.r.o.</h2>
-                            <h3>Pohraniční 504/27</h3>
-                            <h3>Ostrava - Vítkovice, 703 00</h3>
-                            <h3>Bílá budova, 4. Patro</h3>
-                            <h3>IČO:	02625041</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="span-medium-2"></div>
-                <div class="span-none-padding-mini-24 span-small-12 span-medium-12">
-                    <div class="row">
-                        <!--icon-->
-                        <div class="span-none-padding-mini-6 span-none-padding-medium-4">
-                            <span class="me-user">
-                                <span class="path1"></span>
-                                <span class="path2"></span>
-                            </span>
-                        </div>
-                        <!--text-->
-                        <div class="span-none-padding-mini-18 span-none-padding-medium-20">
-                            <h2>Kontaktní osoba</h2>
-                            <h2> <p class="gr">Martin Kolek</p> Dev Team Leader</h2>
-                            <h3>E-mail: <a href="mailto:kolek@modpreneur.com">kolek@modpreneur.com</a></h3>
-                            <h3>Telefon: <a href="tel:+420 778 535 817">+420 778 535 817</a></h3>
-                            <h3>Na příjmu: Po–Pá, 8–17 hod.</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll bg-hide map">
-                <a href="#maps" class="smoothScroll">
-                    <span class="me-scroll-down"></span>
-                </a>
-            </div>
-        </div>
 
+        </div>
 
     </div>
 
@@ -474,6 +471,7 @@
             </div>
         </footer>
     </div>
+
 </div>
 </body>
 
@@ -481,6 +479,5 @@
 <script src="js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwelIq-L8DIAgSeIS6403vWpI14ICFukk"></script>
 <script type="text/javascript" src="js/dist.min.js"></script>
-
 
 </html>

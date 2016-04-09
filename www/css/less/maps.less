@@ -2,8 +2,8 @@
 height: 100vh;
   background: #fff;
   #myCanvas4{
-    top:0;
-    bottom:auto;
+    top: -1px;
+    bottom: auto;
   }
 
   #mapOstrava,#mapBrno{
@@ -11,12 +11,12 @@ height: 100vh;
     height: 100%;
     max-height: 550px;
     z-index: 5;
+    transition: 1s;
 
     position: absolute;
     top: 0;
     left: 0;
   }
-
 
   footer{
     position: absolute;
@@ -42,7 +42,6 @@ height: 100vh;
       width: 100%;
     }
   }
-
 
   h1{
     color: #000;
@@ -77,7 +76,6 @@ height: 100vh;
     }
   }
 
-
   @media only screen and (min-width: 768px) {
     height: 600px ;
     #mapOstrava,#mapBrno{
@@ -85,9 +83,12 @@ height: 100vh;
       height: 550px;
       z-index: 5;
     }
-}
+  }
 
   @media only screen and (min-width: 992px) {
+    #myCanvas4{
+      top:0;
+    }
   }
   @media only screen and (min-width: 1200px) {
     footer{
