@@ -2,12 +2,12 @@
 var cordiBrno = {lat: 49.163525, lng: 16.593858};
 var cordiOstrava= {lat: 49.816232,lng: 18.260720};
 // When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, 'load', initMap);
 
 var mapBrno;
 var mapOstrava;
 
-function init() {
+function initMap() {
 
     // Great app for styles http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
     var mapOptionsOstrava = {

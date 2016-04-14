@@ -49,6 +49,27 @@ $(document).ready(function () {
     var c = document.getElementById("myCanvas1");
     var ctx = c.getContext("2d");
     ctx.beginPath();
+    //context.beginPath();
+    //context.strokeStyle="red";
+    //context.moveTo(188, 130);
+    //context.bezierCurveTo(140, 10, 388, 10, 388, 170);
+    //context.moveTo(0,100);
+    //context.bezierCurveTo(0, 140, 60, 140, 60, 100);
+    //context.lineTo(90,0)
+    //context.lineWidth = 50;
+    //context.stroke();
+    //ctx.fillStyle="transparent";
+/*    ctx.strokeStyle="#fff";
+    ctx.lineWidth=9;
+    ctx.beginPath();
+    ctx.moveTo(-20, 250);
+    ctx.quadraticCurveTo(0, 0, 288, 130);
+    ctx.lineWidth = 10;
+    ctx.fill();
+    ctx.stroke();*/
+    var c = document.getElementById("myCanvas1");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
     ctx.fillStyle="transparent";
     ctx.strokeStyle="#fff";
     ctx.lineWidth=90;
