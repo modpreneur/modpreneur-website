@@ -159,6 +159,7 @@ function init() {
     var mapOptionsOstrava = {
         zoom: 15,
         scrollwheel: false,
+        draggable: false,
         disableDefaultUI: true,
         zoomControl: true,
         zoomControlOptions: {
@@ -198,6 +199,7 @@ function init() {
     var mapOptionsBrno = {
         zoom: 15,
         scrollwheel: false,
+        draggable: false,
         disableDefaultUI: true,
         zoomControl: true,
         zoomControlOptions: {
@@ -255,111 +257,31 @@ function init() {
         icon: 'img/meMAPicon.png',
         title: 'Modern Enterpreneur'
     });
-}
-/*
-function initOva() {
-    // Great app for styles http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
-    var mapOptionsOstrava = {
-        zoom: 15,
-        scrollwheel: false,
-        disableDefaultUI: true,
-        zoomControl: true,
-        zoomControlOptions: {
-            position: google.maps.ControlPosition.RIGHT_CENTER
-        },
-        center: cordiOstrava,
-        styles: [
-            {
-                "stylers": [
-                    { "invert_lightness": true },
-                    { "saturation": -100 },
-                    { "lightness": 21 }
-                ]
-            },{
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    { "lightness": 70 }
-                ]
-            },{
-                "featureType": "water",
-                "stylers": [
-                    { "lightness": 45 }
-                ]
-            },{
-                "featureType": "transit.line",
-                "stylers": [
-                    { "lightness": 25 }
-                ]
-            },{
-                "featureType": "road.highway",
-                "stylers": [
-                    { "lightness": 15 }
-                ]
-            }
-        ]
-    };
-    var mapElementOva = document.getElementById('mapOstrava');
-    mapOstrava = new google.maps.Map(mapElementOva, mapOptionsOstrava);
-    var markerOstrava = new google.maps.Marker({
-        position: cordiOstrava,
-        map: mapOstrava,
-        icon: 'img/meMAPicon.png',
-        title: 'Modern Enterpreneur'
+
+
+    /* Listeners for scrolling, on only after click*/
+    mapBrno.addListener('click', function() {
+        mapBrno.set('scrollwheel', true);
+    });
+    mapBrno.addListener( 'mouseout', function(event){
+        mapBrno.set('scrollwheel', false);
+    });
+
+    mapOstrava.addListener('click', function() {
+        mapOstrava.set('scrollwheel', true);
+    });
+    mapOstrava.addListener( 'mouseout', function(event){
+        mapOstrava.set('scrollwheel', false);
+    });
+
+    /* Drag for mobile */
+    mapBrno.addListener('click', function() {
+        mapBrno.set('draggable', true);
+    });
+    mapOstrava.addListener('click', function() {
+        mapOstrava.set('draggable', true);
     });
 }
-
-function initBrno() {
-    var mapOptionsBrno = {
-        zoom: 15,
-        scrollwheel: false,
-        disableDefaultUI: true,
-        zoomControl: true,
-        zoomControlOptions: {
-            position: google.maps.ControlPosition.RIGHT_CENTER
-        },
-        center: cordiBrno,
-        styles: [
-            {
-                "stylers": [
-                    { "invert_lightness": true },
-                    { "saturation": -100 },
-                    { "lightness": 21 }
-                ]
-            },{
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    { "lightness": 70 }
-                ]
-            },{
-                "featureType": "water",
-                "stylers": [
-                    { "lightness": 45 }
-                ]
-            },{
-                "featureType": "transit.line",
-                "stylers": [
-                    { "lightness": 25 }
-                ]
-            },{
-                "featureType": "road.highway",
-                "stylers": [
-                    { "lightness": 15 }
-                ]
-            }
-        ]
-    };
-    var mapElementBrno = document.getElementById('mapBrno');
-    mapBrno = new google.maps.Map(mapElementBrno, mapOptionsBrno);
-    var markerBrno = new google.maps.Marker({
-        position: cordiBrno,
-        map: mapBrno,
-        icon: 'img/meMAPicon.png',
-        title: 'Modern Enterpreneur'
-    });
-}*/
-
-
-
 
 google.maps.event.addDomListener(window, "resize", function() {
 
@@ -372,4 +294,5 @@ google.maps.event.addDomListener(window, "resize", function() {
     mapOstrava.setCenter(centerOva);
     
 });
+
 
