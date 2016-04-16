@@ -2,7 +2,7 @@
 var cordiBrno = {lat: 49.163525, lng: 16.593858};
 var cordiOstrava= {lat: 49.816232,lng: 18.260720};
 // When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', initMap);
+/*google.maps.event.addDomListener(window, 'load', initMap);*/
 
 var mapBrno;
 var mapOstrava;
@@ -97,20 +97,48 @@ function initMap() {
 
     // Create the Google Map using our element and options defined above
     mapOstrava = new google.maps.Map(mapElementOva, mapOptionsOstrava);
-    var markerOstrava = new google.maps.Marker({
-        position: cordiOstrava,
-        map: mapOstrava,
-        icon: 'img/meMAPicon.png',
-        title: 'Modern Enterpreneur'
-    });
+    //small marker on mobile
+    if ( window.innerWidth >= 768 )
+    {
+        var markerOstrava = new google.maps.Marker({
+            position: cordiOstrava,
+            map: mapOstrava,
+            icon: 'img/meMAPicon.png',
+            title: 'Modern Enterpreneur'
+        });
+    }
+    else {
+        var markerOstrava = new google.maps.Marker({
+            position: cordiOstrava,
+            map: mapOstrava,
+            icon: 'img/meMAPiconS.png',
+            title: 'Modern Enterpreneur'
+        });
+    }
 
     mapBrno = new google.maps.Map(mapElementBrno, mapOptionsBrno);
-    var markerBrno = new google.maps.Marker({
-        position: cordiBrno,
-        map: mapBrno,
-        icon: 'img/meMAPicon.png',
-        title: 'Modern Enterpreneur'
-    });
+    //small marker on mobile
+    if ( window.innerWidth >= 768 )
+    {
+        var markerBrno = new google.maps.Marker({
+            position: cordiBrno,
+            map: mapBrno,
+            icon: 'img/meMAPicon.png',
+            title: 'Modern Enterpreneur'
+        });
+    }
+    else {
+        var markerBrno = new google.maps.Marker({
+            position: cordiBrno,
+            map: mapBrno,
+            icon: 'img/meMAPiconS.png',
+            title: 'Modern Enterpreneur'
+        });
+    };
+
+    //unnecesseary just try solve marker on reference maps
+    markerBrno.setMap(mapBrno);
+    markerOstrava.setMap(mapOstrava);
 
 
     /* Listeners for scrolling, on only after click*/
@@ -135,18 +163,22 @@ function initMap() {
     mapOstrava.addListener('click', function() {
         mapOstrava.set('draggable', true);
     });
+
+
+    /* Centering map marker */
+    google.maps.event.addDomListener(window, "resize", function() {
+
+        var centerBrno = mapBrno.getCenter();
+        google.maps.event.trigger(mapBrno, "resize");
+        mapBrno.setCenter(centerBrno);
+
+        var centerOva = mapOstrava.getCenter();
+        google.maps.event.trigger(mapOstrava, "resize");
+        mapOstrava.setCenter(centerOva);
+
+    });
 }
 
-google.maps.event.addDomListener(window, "resize", function() {
 
-    var centerBrno = mapBrno.getCenter();
-    google.maps.event.trigger(mapBrno, "resize");
-    mapBrno.setCenter(centerBrno);
-
-    var centerOva = mapOstrava.getCenter();
-    google.maps.event.trigger(mapOstrava, "resize");
-    mapOstrava.setCenter(centerOva);
-    
-});
 
 

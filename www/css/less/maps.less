@@ -1,10 +1,6 @@
 #maps{
-height: 100vh;
+ height: 100vh;
   background: #fff;
-  #myCanvas4{
-    top: -1px;
-    bottom: auto;
-  }
 
   #mapOstrava,#mapBrno{
     width: 100%;
@@ -16,6 +12,12 @@ height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  #myCanvas4{
+    top: -1px;
+    bottom: auto;
+    height: 100px;
   }
 
   footer{
@@ -33,6 +35,7 @@ height: 100vh;
       width: 100%;
     }
     h3{
+      line-height: 18px;
       display: block;
       font-size: 12px;
       color: #fff;
@@ -67,7 +70,6 @@ height: 100vh;
     height: 500px;
   }
 
-  /* Extra Small Devices, Phones */
   @media only screen and (min-width: 480px) {
     #mapOstrava,#mapBrno{
       max-height: 500px;
@@ -90,11 +92,15 @@ height: 100vh;
 
   @media only screen and (min-width: 992px) {
     #myCanvas4{
-      top:0;
+      top: 0;
     }
   }
   @media only screen and (min-width: 1200px) {
     height: 620px;
+    #myCanvas4{
+      top: -75px;
+      height: 200px;
+    }
     footer{
       height: 120px;
       h3{

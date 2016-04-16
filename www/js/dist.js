@@ -1,48 +1,27 @@
-window.onload = function () {
-    // only apply to IE
-    if (!/*@cc_on!@*/0) return;
-
-    // find every element to test
-    var all = document.getElementsByTagName('*'), i = all.length;
-
-    // fast reverse loop
-    while (i--) {
-        // if the scrollWidth (the real width) is greater than
-        // the visible width, then apply style changes
-        if (all[i].scrollWidth > all[i].offsetWidth) {
-            all[i].style['paddingBottom'] = '20px';
-            all[i].style['overflowY'] = 'hidden';
-        }
-    }
-};
 
 $(document).ready(function () {
 
     $(document).on("scroll", onScroll);
 
-    //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                //hide menu on small dev
+                $('#nav input').prop( "checked", false );
 
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
+                //part of snippet used from css-tricks for smooth scroll
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
 
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
+            });
         });
-
-        //hide menu on small dev
-        $('#nav input').prop( "checked", false );
-    });
 
     //First canvas between header and products
     //Height is set by css for media queries
@@ -58,18 +37,16 @@ $(document).ready(function () {
 
     //Second - products and career
     var c2 = document.getElementById("myCanvas2");
-    c2.style.height ='250px';
     var ctx2 = c2.getContext("2d");
     ctx2.beginPath();
     ctx2.fillStyle="#F2F2F2";
     ctx2.strokeStyle="transparent";
-    ctx2.arc(100,250,150,1*Math.PI,0*Math.PI);
+    ctx2.arc(100,200,120,1*Math.PI,0*Math.PI);
     ctx2.fill();
     ctx2.stroke();
 
     //Third between career and concat
     var c3 = document.getElementById("myCanvas3");
-    c3.style.height ='200px';
     var ctx3 = c3.getContext("2d");
     ctx3.beginPath();
     ctx3.translate(10,0);
@@ -81,22 +58,22 @@ $(document).ready(function () {
 
     //Last for top of maps
     var c4 = document.getElementById("myCanvas4");
-    c4.style.height ='100px';
     c4.style.zIndex = '6';
     var ctx4 = c4.getContext("2d");
     ctx4.beginPath();
     ctx4.fillStyle="#fff";
     ctx4.strokeStyle="transparent";
-    ctx4.arc(50,0,80,0,2*Math.PI);
+    ctx4.arc(50,10,80,0,2*Math.PI);
     ctx4.fill();
     ctx4.stroke();
+
 
     $('#brnBtn').on('click', function (){
         $('.ostrava').addClass('hide');
         $('#mapOstrava').addClass('hideM');
         $('.brno').removeClass('hide');
         $('#mapBrno').removeClass('hideM');
-        $('#contact #ovaBtn').removeClass('btnON');
+        $('#ovaBtn').removeClass('btnON');
         $(this).addClass('btnON');
     });
 
@@ -105,29 +82,29 @@ $(document).ready(function () {
         $('#mapOstrava').removeClass('hideM');
         $('.brno').addClass('hide');
         $('#mapBrno').addClass('hideM');
-        $('#contact #brnBtn').removeClass('btnON');
+        $('#brnBtn').removeClass('btnON');
         $(this).addClass('btnON');
     });
-
 
 });
 
 function onScroll(event){
+    // add active class on scroll
     var scrollPos = $(document).scrollTop();
     $('#nav a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        if (refElement.position().top - 110 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
             $('#nav ul li a').removeClass("active");
             currLink.addClass("active");
         }
         else{
             currLink.removeClass("active");
         }
-
     });
 
-    if(scrollPos > $('.head-content').position().top){
+    //background for fixed navigation
+    if (scrollPos > $('.head-content').position().top + 5){
         $('.head-content').addClass('scrollMenu');
         $('.bg-scrollMenu').addClass('bg-scrollMenuON');
     }
@@ -135,25 +112,17 @@ function onScroll(event){
         $('.head-content').removeClass('scrollMenu');
         $('.bg-scrollMenu').removeClass('bg-scrollMenuON');
     }
-
-    if(scrollPos > $('#intro').height()){
-        $('.bg-scrollMenu').addClass('bg-scrollMenuONblack');
-    }
-    else {
-        $('.bg-scrollMenu').removeClass('bg-scrollMenuONblack');
-    }
-
 }
 
 var cordiBrno = {lat: 49.163525, lng: 16.593858};
 var cordiOstrava= {lat: 49.816232,lng: 18.260720};
 // When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
+/*google.maps.event.addDomListener(window, 'load', initMap);*/
 
 var mapBrno;
 var mapOstrava;
 
-function init() {
+function initMap() {
 
     // Great app for styles http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
     var mapOptionsOstrava = {
@@ -243,20 +212,48 @@ function init() {
 
     // Create the Google Map using our element and options defined above
     mapOstrava = new google.maps.Map(mapElementOva, mapOptionsOstrava);
-    var markerOstrava = new google.maps.Marker({
-        position: cordiOstrava,
-        map: mapOstrava,
-        icon: 'img/meMAPicon.png',
-        title: 'Modern Enterpreneur'
-    });
+    //small marker on mobile
+    if ( window.innerWidth >= 768 )
+    {
+        var markerOstrava = new google.maps.Marker({
+            position: cordiOstrava,
+            map: mapOstrava,
+            icon: 'img/meMAPicon.png',
+            title: 'Modern Enterpreneur'
+        });
+    }
+    else {
+        var markerOstrava = new google.maps.Marker({
+            position: cordiOstrava,
+            map: mapOstrava,
+            icon: 'img/meMAPiconS.png',
+            title: 'Modern Enterpreneur'
+        });
+    }
 
     mapBrno = new google.maps.Map(mapElementBrno, mapOptionsBrno);
-    var markerBrno = new google.maps.Marker({
-        position: cordiBrno,
-        map: mapBrno,
-        icon: 'img/meMAPicon.png',
-        title: 'Modern Enterpreneur'
-    });
+    //small marker on mobile
+    if ( window.innerWidth >= 768 )
+    {
+        var markerBrno = new google.maps.Marker({
+            position: cordiBrno,
+            map: mapBrno,
+            icon: 'img/meMAPicon.png',
+            title: 'Modern Enterpreneur'
+        });
+    }
+    else {
+        var markerBrno = new google.maps.Marker({
+            position: cordiBrno,
+            map: mapBrno,
+            icon: 'img/meMAPiconS.png',
+            title: 'Modern Enterpreneur'
+        });
+    };
+
+    //unnecesseary just try solve marker on reference maps
+    markerBrno.setMap(mapBrno);
+    markerOstrava.setMap(mapOstrava);
 
 
     /* Listeners for scrolling, on only after click*/
@@ -281,18 +278,22 @@ function init() {
     mapOstrava.addListener('click', function() {
         mapOstrava.set('draggable', true);
     });
+
+
+    /* Centering map marker */
+    google.maps.event.addDomListener(window, "resize", function() {
+
+        var centerBrno = mapBrno.getCenter();
+        google.maps.event.trigger(mapBrno, "resize");
+        mapBrno.setCenter(centerBrno);
+
+        var centerOva = mapOstrava.getCenter();
+        google.maps.event.trigger(mapOstrava, "resize");
+        mapOstrava.setCenter(centerOva);
+
+    });
 }
 
-google.maps.event.addDomListener(window, "resize", function() {
 
-    var centerBrno = mapBrno.getCenter();
-    google.maps.event.trigger(mapBrno, "resize");
-    mapBrno.setCenter(centerBrno);
-
-    var centerOva = mapOstrava.getCenter();
-    google.maps.event.trigger(mapOstrava, "resize");
-    mapOstrava.setCenter(centerOva);
-    
-});
 
 

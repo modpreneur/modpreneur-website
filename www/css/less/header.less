@@ -1,8 +1,5 @@
 #intro {
-  #myCanvas1{
-    height: 150px;
-  }
-  height: 100vh;
+  min-height: 460px;
   max-height: 560px;
 
   .head-content {
@@ -21,11 +18,13 @@
       left: 15px;
       z-index: 999;
       height: 50px;
+      transition: .6s;
     }
     #nav {
-      position: fixed;
+      position: absolute; //fixed;
       top: 20px;
       right: 10px;
+      transition: .6s;
 
       width: 46px;
       height: 46px;
@@ -74,7 +73,7 @@
           opacity: 0;
         }
         ul {
-          background: rgba(0,0,0,0.9);
+          background: rgba(0, 0, 0, 0.9);
           border-radius: 0;
           width: 100vw;
           height: 100vh;
@@ -93,11 +92,10 @@
             text-align: center;
 
             /* animation, set up delay, opacity for list and fading for link*/
-            transition: all .5s ease ;
+            transition: all .5s ease;
             opacity: 0;
 
             &:nth-of-type(1) {
-              margin-top: 50px;
               transition-delay: .5s;
             }
             &:nth-of-type(2) {
@@ -111,27 +109,28 @@
             }
 
             &:nth-of-type(1) {
-              a{
+              a {
                 transition-delay: .3s;
               }
             }
             &:nth-of-type(2) {
-              a{
+              a {
                 transition-delay: .5s;
               }
             }
             &:nth-of-type(3) {
-              a{
+              a {
                 transition-delay: .7s;
               }
             }
             &:nth-of-type(4) {
-              a{
+              a {
                 transition-delay: .9s;
               }
             }
 
             a {
+              font-size: 20px;
               margin-left: 20%;
               transition: margin 1s;
               padding-bottom: 5px;
@@ -151,12 +150,12 @@
         }
         /*  Opacity and margin for animate menu - fade in from right */
         input[type=checkbox]:checked {
-          ~ #dropdown li{
-             opacity: 1;
-            &:first-child{
-              margin-top: 50px;
+          ~ #dropdown li {
+            opacity: 1;
+            &:first-child {
+              margin-top: calc(~"38.2vh - 80px");
             }
-            a{
+            a {
               margin-left: 0;
             }
           }
@@ -168,6 +167,7 @@
         }
         /*  Hambuger menu  */
         input[type="checkbox"]:checked ~ label {
+          background: #6fbc00;
           .menuRes1, .menuRes4 {
             top: 15px;
             opacity: 0;
@@ -186,13 +186,14 @@
       }
     }
   }
-
-  .scrollMenu #nav .dropdown-main .show-drop {
-    background: #6fbc00;
+  br {
+    display: none;
+  }
+  #myCanvas1 {
+    height: 140px;
   }
   .content {
     z-index: 2;
-    margin-top: 10%;
     h1 {
       max-width: none;
       margin: 10px auto;
@@ -202,13 +203,14 @@
     h2 {
       color: #a4a4a4;
       font-size: 18px;
-      margin: 0 30px;
+      margin: 10px 30px;
     }
     .margin-auto {
       width: 200px;
     }
   }
   .scroll .me-scroll-down {
+    display: none;
     -webkit-animation-name: Floatingx;
     -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
@@ -219,19 +221,31 @@
     -moz-animation-timing-function: ease-in-out;
   }
   @-webkit-keyframes Floatingx {
-    from {  -webkit-transform: translate(0, 0px);  }
-    65% {  -webkit-transform: translate(0, 15px);  }
-    to {  -webkit-transform: translate(0, -0px);  }
+    from {
+      -webkit-transform: translate(0, 0px);
+    }
+    65% {
+      -webkit-transform: translate(0, 15px);
+    }
+    to {
+      -webkit-transform: translate(0, -0px);
+    }
   }
   @-moz-keyframes Floating {
-    from {  -moz-transform: translate(0, 0px);  }
-    65% {  -moz-transform: translate(0, 15px);  }
-    to {  -moz-transform: translate(0, -0px);  }
+    from {
+      -moz-transform: translate(0, 0px);
+    }
+    65% {
+      -moz-transform: translate(0, 15px);
+    }
+    to {
+      -moz-transform: translate(0, -0px);
+    }
   }
 
-  @media only screen and (orientation: portrait){
+  @media only screen and (min-width: 400px){
     .content{
-      margin-top: 5%;
+      margin-top: 20px;
     }
   }
   @media only screen and (min-width: 480px) and (min-height: 50px) {
@@ -248,206 +262,274 @@
     .content {
       margin-top: 0;
       h1 {
-        margin-top: 50px;
+        margin-top: 15px;
         text-shadow: 1px 1px #000;
         line-height: 38px;
       }
-      h2{
+      h2 {
         line-height: 24px;
       }
+    }
+
+    .scroll .me-scroll-down {
+      display: block;
+    }
+
+    #myCanvas1 {
+      height: 190px;
+    }
+    .button{
+      margin-bottom: 10px;
+    }
+  }
+  @media only screen and (min-width: 545px) {
+    .content{
+      margin-top: 10px;
+    }
+    .button{
+      margin: 25px auto;
+    }
+  }
+  @media only screen and (min-width: 620px) {
+    .content{
+      margin-top: 15px;
+    }
+    .button{
+      margin-top: 35px;
     }
   }
   @media only screen and (min-width: 768px) {
     height: 480px;
     max-height: 670px;
-    #myCanvas1{
-      height: 200px;
-    }
-    .scrollMenu #nav .dropdown-main .show-drop{
-      background: transparent;
-    }
-    .head-content #nav {
-      top: 15px;
-      right: 500px;
-      .dropdown-main {
-        label {
-          [class*="menuRes"] {
-            display: none;
-            opacity: 0;
-          }
-        }
-        ul {
-          top: 0;
-          visibility: visible;
-          opacity: 1;
-          min-width: 500px;
-          height: auto;
-          width: 130px;
-          margin-left: 0;
-          right: 0;
-          background: transparent;
-          box-shadow: none;
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          li {
-            width: auto;
-            opacity: 1;
-            margin-top: 0px;
-            a {
-              margin-left: 0;
-              font-size: 16px;
-              border-bottom: 2px solid transparent;
-              color: #a3a3a3;
-              width: auto;
-              float: right;
-              padding: 10px 5px 0 5px;
-              &:hover{
-               //transform: scale(1.05);
-              }
-            }
-            &:first-child{
-              margin-top: 0px;
-            }
-          }
-
-          &:hover, &:focus {
-            background: none;
-            box-shadow: none;
-          }
-        }
-      }
-    }
-
-    .bg-scrollMenu {
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 99;
+    br {
       display: block;
-      width: 100%;
-      height: 49px;
     }
-
-    .bg-scrollMenuON {
-      background: rgba(97,97,97,.75);
-      //border-bottom: 1px solid #757575;
-    }
-
-    .bg-scrollMenuONblack {
-      background: rgba(255, 255, 255, 0.85);
-      border-bottom: 1px solid #ececec;
-    }
-
-    .scrollMenu {
-      #nav {
-        top: 0;
-        .dropdown-main ul li a {
-          padding: 10px 5px 12px 5px;
-          color: #ABABAB;
-        }
-        .dropdown-main ul .active{
-          border-bottom: 2px solid #6fbc00;
-        }
-      }
-      .logo {
-        position: fixed;
-        top: 5px;
-        height: 40px;
-        right: 70%;
-      }
-    }
-    input[type=checkbox]:checked ~ #dropdown {
-      margin-left: 0;
-    }
-
-    .content {
-      h1 {
-        font-size: 36px;
-        margin-bottom: 15px;
-      }
-      h2 {
-        line-height: 30px;
-      }
-    }
-
-  }
-  @media only screen and (min-width: 992px) {
-    height: 500px;
-    #myCanvas1{
-      height: 245px;
-    }
-    .span-mini-24{
-      padding: 0;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    height: 675px;
-    .head-content{
-      #nav{
-        right: auto;
-        left: 50%;
-        #dropdown{
-          margin-left: 110px;
-          margin-top: 20px;
-          li{
-            margin-left: 40px;
-          }
-        }
-      }
-      .logo{
-        top: 25px;
-        height: 70px;
-        z-index: 999;
-        transition: all .7s;
-      }
+    .button{
+      margin-top: 25px;
+      margin-bottom: 20px;
     }
     .content{
-      h1{
-        font-size: 62px;
-        margin-top: 120px;
-        margin-bottom: 30px;
-      }
-      h2{
-        font-size: 22px;
-        line-height: 39px;
-      }
-      .margin-auto{
-        width: 280px;
-      }
-      .button{
-        width: 280px;
-        padding: 18px 0;
-        margin: 45px 0 20px 0;
-      }
+      margin-top: 10px;
     }
-    .scrollMenu {
-      .logo{
-        position: fixed;
-        top: 5px;
-        right: 70%;
-        left: auto;
-        height: 40px;
-        z-index: 999;
-      }
-      #nav {
-        top: 0;
-        #dropdown{
-          margin-top: 0;
+
+    #myCanvas1 {
+      height: 270px;
+    }
+
+      .head-content {
+        .logo {
+          height: 60px;
         }
-        .dropdown-main ul li a {
-          padding: 10px 5px 11px 5px;
-          &:hover{
-            //border-bottom: 2px solid #6fbc00;
+        #nav {
+          top: 30px;
+          position: absolute;
+          right: 15px;
+          width: auto;
+
+          .dropdown-main {
+            width: 450px;
+            transition: .6s;
+            label {
+              display: none;
+              [class*="menuRes"] {
+                display: none;
+                opacity: 0;
+              }
+            }
+            ul {
+              top: 0;
+              visibility: visible;
+              opacity: 1;
+              min-width: 100%;
+              height: auto;
+              width: 130px;
+              margin-left: 0;
+              right: 0;
+              background: transparent;
+              box-shadow: none;
+
+              /*          display: flex;
+                        flex-direction: row;
+                        justify-content: flex-end;*/
+              li {
+                float: left;
+                margin: 0;
+                margin-left: 40px;
+
+                width: auto;
+                opacity: 1;
+                a {
+                  margin-left: 0;
+                  font-size: 16px;
+                  border-bottom: 2px solid transparent;
+                  color: #a3a3a3;
+                  width: auto;
+                  float: right;
+                  padding: 0 5px 2px 5px;
+                }
+                &:first-child {
+                  margin-top: 0px;
+                }
+              }
+
+              &:hover, &:focus {
+                background: none;
+                box-shadow: none;
+              }
+            }
           }
         }
-        .dropdown-main ul{
-          .active{
+      }
+
+      .bg-scrollMenu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        display: block;
+        width: 100%;
+        height: 49px;
+      }
+
+      .bg-scrollMenuON {
+        background: rgba(255, 255, 255, 0.85);
+        border-bottom: 1px solid #ececec;
+      }
+      .scrollMenu {
+        #nav {
+          position: fixed;
+          top: 0;
+          .dropdown-main ul li a {
+            transition: padding 0.5s;
+            padding: 10px 5px 12px 5px;
+            color: #ABABAB;
+          }
+
+          .dropdown-main ul .active {
             border-bottom: 2px solid #6fbc00;
           }
         }
+        .logo {
+          position: fixed;
+          top: 5px;
+          left: 10px;
+          height: 40px;
+        }
+      }
+      input[type=checkbox]:checked ~ #dropdown {
+        margin-left: 0;
+      }
+      .content {
+        h1 {
+          font-size: 38px;
+          margin-bottom: 15px;
+        }
+        h2 {
+          line-height: 30px;
+        }
       }
     }
-  }
+
+    @media only screen and (min-width: 992px) {
+      height: 500px;
+      #myCanvas1 {
+        height: 225px;
+      }
+      .content{
+
+        h1{
+          font-size: 40px;
+        }
+      }
+      .span-mini-24 {
+        padding: 0;
+      }
+    }
+    @media only screen and (min-width: 1200px) {
+      height: 675px;
+      .head-content {
+        #nav {
+          left: 50%;
+          top: 45px;
+          .dropdown-main {
+            width: 530px;
+            margin-right: 0;
+            margin-left: 60px;
+          }
+          #dropdown {
+
+            li {
+              margin-left: 60px;
+            }
+          }
+
+        }
+        .logo {
+          top: 26px;
+          left: 15px;
+          height: 70px;
+          z-index: 999;
+          transition: all .7s;
+        }
+      }
+
+      .content {
+        margin-top: 0;
+        h1 {
+          font-size: 62px;
+          margin-top: 130px;
+          margin-bottom: 30px;
+        }
+        h2 {
+          font-size: 22px;
+          line-height: 39px;
+        }
+        .margin-auto {
+          width: 280px;
+        }
+        .button {
+          width: 280px;
+          padding: 18px 0;
+          margin: 45px 0 20px 0;
+        }
+      }
+
+      .scrollMenu {
+        .logo {
+          position: fixed;
+          top: 5px;
+          left: auto;
+          height: 40px;
+          z-index: 999;
+        }
+        #nav {
+          top: 0;
+          #dropdown {
+            margin-top: 0;
+          }
+          .dropdown-main ul li a {
+            padding: 11px 5px;
+          }
+          .dropdown-main ul {
+            .active {
+              border-bottom: 2px solid #6fbc00;
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width: 1230px) {
+      .head-content {
+        #nav {
+          .dropdown-main {
+            margin-left: 80px;
+          }
+        }
+        .logo {
+          left: auto;
+        }
+      }
+    }
 
 }

@@ -1,72 +1,30 @@
-window.onload = function () {
-    // only apply to IE
-    if (!/*@cc_on!@*/0) return;
-
-    // find every element to test
-    var all = document.getElementsByTagName('*'), i = all.length;
-
-    // fast reverse loop
-    while (i--) {
-        // if the scrollWidth (the real width) is greater than
-        // the visible width, then apply style changes
-        if (all[i].scrollWidth > all[i].offsetWidth) {
-            all[i].style['paddingBottom'] = '20px';
-            all[i].style['overflowY'] = 'hidden';
-        }
-    }
-};
 
 $(document).ready(function () {
 
     $(document).on("scroll", onScroll);
 
-    //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                //hide menu on small dev
+                $('#nav input').prop( "checked", false );
 
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
+                //part of snippet used from css-tricks for smooth scroll
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
 
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
+            });
         });
-
-        //hide menu on small dev
-        $('#nav input').prop( "checked", false );
-    });
 
     //First canvas between header and products
     //Height is set by css for media queries
-    var c = document.getElementById("myCanvas1");
-    var ctx = c.getContext("2d");
-    ctx.beginPath();
-    //context.beginPath();
-    //context.strokeStyle="red";
-    //context.moveTo(188, 130);
-    //context.bezierCurveTo(140, 10, 388, 10, 388, 170);
-    //context.moveTo(0,100);
-    //context.bezierCurveTo(0, 140, 60, 140, 60, 100);
-    //context.lineTo(90,0)
-    //context.lineWidth = 50;
-    //context.stroke();
-    //ctx.fillStyle="transparent";
-/*    ctx.strokeStyle="#fff";
-    ctx.lineWidth=9;
-    ctx.beginPath();
-    ctx.moveTo(-20, 250);
-    ctx.quadraticCurveTo(0, 0, 288, 130);
-    ctx.lineWidth = 10;
-    ctx.fill();
-    ctx.stroke();*/
     var c = document.getElementById("myCanvas1");
     var ctx = c.getContext("2d");
     ctx.beginPath();
@@ -79,18 +37,16 @@ $(document).ready(function () {
 
     //Second - products and career
     var c2 = document.getElementById("myCanvas2");
-    c2.style.height ='250px';
     var ctx2 = c2.getContext("2d");
     ctx2.beginPath();
     ctx2.fillStyle="#F2F2F2";
     ctx2.strokeStyle="transparent";
-    ctx2.arc(100,250,150,1*Math.PI,0*Math.PI);
+    ctx2.arc(100,200,120,1*Math.PI,0*Math.PI);
     ctx2.fill();
     ctx2.stroke();
 
     //Third between career and concat
     var c3 = document.getElementById("myCanvas3");
-    c3.style.height ='200px';
     var ctx3 = c3.getContext("2d");
     ctx3.beginPath();
     ctx3.translate(10,0);
@@ -102,22 +58,22 @@ $(document).ready(function () {
 
     //Last for top of maps
     var c4 = document.getElementById("myCanvas4");
-    c4.style.height ='100px';
     c4.style.zIndex = '6';
     var ctx4 = c4.getContext("2d");
     ctx4.beginPath();
     ctx4.fillStyle="#fff";
     ctx4.strokeStyle="transparent";
-    ctx4.arc(50,0,80,0,2*Math.PI);
+    ctx4.arc(50,10,80,0,2*Math.PI);
     ctx4.fill();
     ctx4.stroke();
+
 
     $('#brnBtn').on('click', function (){
         $('.ostrava').addClass('hide');
         $('#mapOstrava').addClass('hideM');
         $('.brno').removeClass('hide');
         $('#mapBrno').removeClass('hideM');
-        $('#contact #ovaBtn').removeClass('btnON');
+        $('#ovaBtn').removeClass('btnON');
         $(this).addClass('btnON');
     });
 
@@ -126,29 +82,29 @@ $(document).ready(function () {
         $('#mapOstrava').removeClass('hideM');
         $('.brno').addClass('hide');
         $('#mapBrno').addClass('hideM');
-        $('#contact #brnBtn').removeClass('btnON');
+        $('#brnBtn').removeClass('btnON');
         $(this).addClass('btnON');
     });
-
 
 });
 
 function onScroll(event){
+    // add active class on scroll
     var scrollPos = $(document).scrollTop();
     $('#nav a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        if (refElement.position().top - 110 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
             $('#nav ul li a').removeClass("active");
             currLink.addClass("active");
         }
         else{
             currLink.removeClass("active");
         }
-
     });
 
-    if(scrollPos > $('.head-content').position().top){
+    //background for fixed navigation
+    if (scrollPos > $('.head-content').position().top + 5){
         $('.head-content').addClass('scrollMenu');
         $('.bg-scrollMenu').addClass('bg-scrollMenuON');
     }
@@ -156,12 +112,4 @@ function onScroll(event){
         $('.head-content').removeClass('scrollMenu');
         $('.bg-scrollMenu').removeClass('bg-scrollMenuON');
     }
-
-    if(scrollPos > $('#intro').height()){
-        $('.bg-scrollMenu').addClass('bg-scrollMenuONblack');
-    }
-    else {
-        $('.bg-scrollMenu').removeClass('bg-scrollMenuONblack');
-    }
-
 }
