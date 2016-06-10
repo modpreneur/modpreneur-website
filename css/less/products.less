@@ -1,0 +1,144 @@
+
+#products {
+  background: #fff;
+  padding-bottom: 100px;
+  max-height: none;
+  margin-top: -35px;
+
+  h1 {
+    color: #000;
+  }
+  h3 {
+    color: #979797;
+    text-align: center;
+  }
+  .product-items {
+    margin-top: 10px;
+    h2, h3 {
+      text-align: left;
+      margin-left: 10px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #000;
+    }
+    h3 {
+      color: #979797;
+      line-height: 16px;
+      margin-right: 20px;
+    }
+    .row {
+      display: block;
+      width: 100%;
+      padding: 15px 0;
+      &:after {
+        position: relative;
+        bottom: -15px;
+        left: 5%;
+        width: calc(~"95% - 20px");
+        height: 1px;
+        background: rgba(228, 228, 228, 0.65);
+      }
+    }
+    .span-medium-12:last-of-type{
+      .row:last-of-type:after{
+        height: 0;
+      }
+    }
+  }
+  .scroll{
+    bottom: 40px;
+  }
+
+  @media only screen and (min-width: 480px){
+    margin-top: -30px;
+    padding-bottom: 140px;
+    .scroll{
+      bottom: 80px;
+    }
+    .product-items {
+      margin-top: 10px;
+      h2, h3 {
+        margin-left: 10px;
+      }
+      h2{
+        font-size: 20px;
+      }
+      h3{
+        font-size: 16px;
+      }
+
+      [class^="me-"] {
+        font-size: 55px;
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    margin-top: -100px;
+    h2 {
+      margin: 0 10px;
+    }
+
+    .product-items {
+      margin-top: 70px;
+      .row {
+      min-height: 115px;
+
+      &:after {
+        display: none;
+      }
+      h2, h3 {
+        text-align: left;
+        margin-left: 20px;
+      }
+      h3 {
+        max-width: 255px;
+      }
+      [class^="me-"], [class*=" me-"] {
+        font-size: 60px;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  }
+  @media only screen and (min-width: 1200px) {
+    .scroll{
+      bottom: 150px;
+    }
+    #myCanvas2{
+      height: 300px;
+    }
+    margin-top: -95px;
+    .product-items {
+      margin-top: 100px;
+      padding-bottom: 30px;
+      .row {
+        min-height: 250px;
+        padding: 0;
+        h2 {
+          font-size: 27px;
+        }
+        h3 {
+          font-size: 17px;
+          line-height: 23px;
+        }
+        h2, h3 {
+          text-align: left;
+          margin-left: 25px;
+        }
+        [class^="me-"], [class*=" me-"] {
+          font-size: 100px;
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+
+  }
+
+}

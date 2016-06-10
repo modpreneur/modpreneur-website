@@ -1,0 +1,178 @@
+@import "meicon";
+@import "proxima-font";
+
+div#career {
+  background: #f2f2f2;
+
+  h2 {
+    color: #a4a4a4;
+    text-align: center;
+  }
+  .scroll{
+    margin-left: -20px;
+    bottom: 80px;
+  }
+  #myCanvas2{
+    height: 100px;
+    top: -90px;
+  }
+
+  .harmonica {
+    margin: 35px auto 0 auto;
+    background: transparent;
+    max-width: 900px;
+    min-height: 400px;
+    .show-harmonica {
+      padding: 5px 15px;
+      //text-align: justify;
+      background: transparent;
+      font-size: 12px;
+      color: #000;
+    }
+    .main-panel {
+      border: 1px solid #d9d9d9;
+      border-radius: 7.5px;
+      margin-bottom: 5px;
+
+      -webkit-transition: all 01s cubic-bezier(.25, .46, .45, .94);
+      -moz-transition: all 01s cubic-bezier(.25, .46, .45, .94);
+      transition: all 01s cubic-bezier(.25, .46, .45, .94);
+      label[for^="harmonica"] {
+        //font-family: 'ProximaNova-Regular', sans-serif;
+        color: #6fbc00;
+        text-align: left;
+        position: relative;
+        background: transparent;
+        font-size: 16px;
+        &:before {
+          color: #aeb0b3;
+          position: absolute;
+          top: 10px;
+          right: 6px;
+
+          font-family: 'meIcons';
+          content: "\e923";
+          font-size: 18px;
+          border: none;
+          background: transparent;
+        }
+        &:hover:before{
+          color: #6fbc00;
+        }
+      }
+    }
+  }
+
+  input[id^="harmonica"]:checked + .main-panel {
+    -webkit-transition: all 1s cubic-bezier(.25, .46, .45, .94);
+    -moz-transition: all 1s cubic-bezier(.25, .46, .45, .94);
+    transition: all 1s cubic-bezier(.25, .46, .45, .94);
+    label[for^="harmonica"] {
+      color: #6fbc00;
+      text-align: left;
+      position: relative;
+      &:before {
+        content: "\e924";
+      }
+    }
+  }
+  @media only screen and (min-width: 380px) {
+    .harmonica {
+      min-height: 380px;
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    height: auto;
+    min-height: 500px;
+    #myCanvas2{
+      height: 200px;
+      top: -190px;
+    }
+    h1{
+      text-align: center;
+    }
+    .small-hidden {
+      display: inline;
+    }
+    .scroll{
+      bottom: 90px;
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding-bottom: 140px;
+    #myCanvas3{
+      bottom: 100px;
+    }
+    .sm-hide {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      margin: 15px;
+    }
+    .scroll span{
+      display: none;
+    }
+    .button{
+      width: 300px;
+      margin: 0 auto 90px auto;
+      padding: 15px;
+    }
+
+    .harmonica {
+      margin-top: 70px;
+      min-height: 335px;
+      .show-harmonica {
+        font-size: 14px;
+      }
+      .main-panel {
+        margin-bottom: 6px;
+        min-height: 49px;
+        label[for^=harmonica] {
+          padding: 15px;
+          &:before {
+            top: 15px;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media only screen and (min-width: 1200px) {
+    min-height: 980px;
+     h2 {
+      font-size: 21px;
+    }
+    .scroll{
+      bottom: 170px;
+    }
+    .harmonica {
+      min-height: 450px;
+      .show-harmonica {
+        font-size: 16px;
+        padding: 0 50px 28px 28px;
+      }
+      .main-panel {
+        margin-bottom: 10px;
+        min-height: 80px;
+        label[for^=harmonica] {
+          font-size: 22px;
+          padding: 28px;
+          &:before {
+            font-size: 24px;
+            top: 28px;
+            right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+

@@ -1,0 +1,229 @@
+div#contact {
+   background: #fff;
+   z-index: 7;
+
+   .span-mini-24{
+     z-index: 11;
+   }
+   button{
+     padding: 5px 0;
+   }
+
+   h2,h3{
+     text-align: left;
+     margin-left: 10px;
+   }
+   h2{
+     color: #a4a4a4;
+     &:last-of-type{
+       margin-bottom: 10px;
+     }
+   }
+   h3{
+     color: #979797;
+     font-size: 14px;
+   }
+   p{
+     display: inline;
+   }
+
+  #myCanvas3{
+    height: 120px;
+    top: -90px;
+  }
+
+  .company{
+     h3:last-child{
+       margin-top: 10px;
+     }
+   }
+  .person{
+    h2:nth-of-type(2){
+      color: #6fbc00 !important;
+      &:after {
+        display: inline-block;
+        color: #c7c7c7;
+        font-size: 16px;
+        content: "Dev Team Leader";
+      }
+    }
+  }
+
+  .contact-contianer{
+    height: 270px;
+  }
+   .brno,.ostrava{
+     width: 100%;
+     position: absolute;
+     transition: 2.5s;
+     opacity: 1;
+     padding: 15px 5px;
+     .row{
+       margin: 15px 0;
+       h2{
+         color: #000;
+       }
+     }
+   }
+
+   .buttons{
+     width: 182px;
+     margin: 20px auto;
+   }
+   button{
+     display: inline-block;
+     background: #fff;
+     border: 1px solid #DBDBDB;
+     color: #000;
+     border-radius: 12px;
+     width: 180px;
+     margin: 10px 0 0 0;
+     &:hover{
+       background: #6fbc00;
+       color: #fff;
+       border: 1px solid transparent;
+     }
+   }
+   .btnON{
+     background: #6fbc00;
+     border: 1px solid transparent;
+     color: #fff;
+     &:hover{
+       background: darken(#6fbc00,3%);
+     }
+   }
+    @media only screen and (min-width : 370px) {
+      .brno, .ostrava {
+        padding-left: 10%;
+      }
+    }
+   @media only screen and (min-width : 480px) {
+     .brno, .ostrava {
+       padding-left: 20px;
+     }
+     h1{
+       text-align: center;
+     }
+     .buttons{
+       width: 365px;
+     }
+     .contact-contianer{
+       height: 165px;
+     }
+   }
+  @media only screen and (min-width : 600px) {
+    min-height: 0;
+    .brno,.ostrava{
+      padding-left: 50px;
+    }
+  }
+
+   /* Small Devices, Tablets */
+   @media only screen and (min-width : 768px) {
+     margin-top: -110px;
+     [class*=" me-"],  [class^=me-] {
+       font-size: 60px;
+       width: 60px;
+       height: 60px;
+     }
+     .me-scroll-down{
+       font-size: 40px;
+       width: 40px;
+       height: 40px;
+     }
+     .buttons{
+       width: 400px;
+     }
+     button {
+       padding: 11px 0;
+       border-radius: 15px;
+       margin: 25px 8px;
+     }
+     .brno,.ostrava{
+       padding-left: 80px;
+       margin: 0 auto;
+       .row{
+         margin: 0;
+       }
+     }
+   }
+
+   @media only screen and (min-width : 992px) {
+     .bg-hide {
+       display: none !important;
+     }
+     h2{
+       font-size: 21px;
+       line-height: 39px;
+     }
+     .contact-contianer{
+       height: 210px;
+     }
+     .brno,.ostrava{
+       max-width: 840px;
+       padding-left: 100px;
+       margin-left: 0;
+       h2{
+         font-size: 26px;
+         line-height: 1;
+       }
+     }
+     h2:last-of-type{
+       margin-bottom: 17px;
+     }
+     h3{
+       font-size: 18px;
+     }
+     .person{
+       h2:nth-of-type(2){
+         &:after {
+           font-size: 22px;
+           content: "Dev Team Leader";
+         }
+       }
+     }
+   }
+
+
+   @media only screen and (min-width : 1200px) {
+     #myCanvas3{
+       height: 180px;
+       top: -130px;
+     }
+
+     [class*=" me-"], [class^="me-"] {
+       font-size: 100px;
+       width: 100px;
+       height: 100px;
+     }
+
+     .person{
+       h2:nth-of-type(2){
+         &:after {
+           font-size: 24px;
+         }
+       }
+     }
+     .buttons{
+       margin: 0 auto 25px auto;
+     }
+     h3{
+       line-height: 24px;
+     }
+
+     button{
+       font-size: 18px;
+     }
+     .brno,.ostrava{
+       transition: 1.5s;
+       padding-left: 0;
+       max-width: 950px;
+       h2{
+         line-height: 30px;
+       }
+       .span-medium-12:last-child .row{
+         margin-left: 100px;
+       }
+     }
+   }
+ }
