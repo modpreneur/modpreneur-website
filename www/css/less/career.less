@@ -5,7 +5,7 @@ div#career {
   background: #f2f2f2;
 
   h2 {
-    color: #a4a4a4;
+    //color: #a4a4a4;
     text-align: center;
   }
   .scroll{
@@ -15,6 +15,10 @@ div#career {
   #myCanvas2{
     height: 100px;
     top: -90px;
+  }
+  #myCanvas3{
+    height: 130px;
+    bottom: -10px;
   }
 
   .harmonica {
@@ -101,7 +105,7 @@ div#career {
   }
 
   @media only screen and (min-width: 768px) {
-    padding-bottom: 140px;
+    padding-bottom: 180px;
     #myCanvas3{
       bottom: 100px;
     }
@@ -109,15 +113,21 @@ div#career {
       display: block;
       opacity: 1;
       visibility: visible;
-      margin: 15px;
+      margin: 0 auto;
+      width: 300px;
+    }
+    .scroll{
+      display: none;
     }
     .scroll span{
       display: none;
     }
     .button{
       width: 300px;
-      margin: 0 auto 90px auto;
-      padding: 15px;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+      padding: 13px;
     }
 
     .harmonica {
@@ -142,6 +152,14 @@ div#career {
 
   @media only screen and (min-width: 1200px) {
     min-height: 980px;
+    padding-bottom: 220px;
+    #myCanvas3{
+      height: 180px;
+      bottom: 65px;
+    }
+    .button{
+      padding: 15px;
+    }
      h2 {
       font-size: 21px;
     }
@@ -149,7 +167,7 @@ div#career {
       bottom: 170px;
     }
     .harmonica {
-      min-height: 450px;
+      min-height: 500px;
       .show-harmonica {
         font-size: 16px;
         padding: 0 50px 28px 28px;

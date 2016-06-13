@@ -1,12 +1,11 @@
 div#contact {
    background: #fff;
    z-index: 7;
+  overflow: hidden;
+
 
    .span-mini-24{
      z-index: 11;
-   }
-   button{
-     padding: 5px 0;
    }
 
    h2,h3{
@@ -14,7 +13,7 @@ div#contact {
      margin-left: 10px;
    }
    h2{
-     color: #a4a4a4;
+     //color: #a4a4a4;
      &:last-of-type{
        margin-bottom: 10px;
      }
@@ -27,10 +26,10 @@ div#contact {
      display: inline;
    }
 
-  #myCanvas3{
+/*  #myCanvas3{
     height: 120px;
     top: -90px;
-  }
+  }*/
 
   .company{
      h3:last-child{
@@ -50,12 +49,14 @@ div#contact {
   }
 
   .contact-contianer{
-    height: 270px;
+    height: 280px;
+    z-index: 10;
   }
    .brno,.ostrava{
      width: 100%;
      position: absolute;
-     transition: 2.5s;
+     top: 0;
+     transition: all 1.2s;//2.5s;
      opacity: 1;
      padding: 15px 5px;
      .row{
@@ -69,13 +70,15 @@ div#contact {
    .buttons{
      width: 182px;
      margin: 20px auto;
+     z-index: 5;
    }
    button{
      display: inline-block;
      background: #fff;
      border: 1px solid #DBDBDB;
      color: #000;
-     border-radius: 12px;
+     padding: 8px 0;
+     border-radius: 15px;
      width: 180px;
      margin: 10px 0 0 0;
      &:hover{
@@ -106,13 +109,22 @@ div#contact {
      }
      .buttons{
        width: 365px;
+       button{
+         width: 175px;
+         &:first-child{
+           margin-right: 10px;
+         }
+       }
      }
      .contact-contianer{
-       height: 165px;
+       height: 200px;
      }
    }
   @media only screen and (min-width : 600px) {
     min-height: 0;
+    .contact-contianer{
+      height: 180px;
+    }
     .brno,.ostrava{
       padding-left: 50px;
     }
@@ -186,10 +198,10 @@ div#contact {
 
 
    @media only screen and (min-width : 1200px) {
-     #myCanvas3{
+/*     #myCanvas3{
        height: 180px;
        top: -130px;
-     }
+     }*/
 
      [class*=" me-"], [class^="me-"] {
        font-size: 100px;
@@ -215,7 +227,7 @@ div#contact {
        font-size: 18px;
      }
      .brno,.ostrava{
-       transition: 1.5s;
+       //transition: 1s;
        padding-left: 0;
        max-width: 950px;
        h2{

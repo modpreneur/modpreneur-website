@@ -16,10 +16,12 @@ function initMap() {
         draggable: false,
         disableDefaultUI: true,
         zoomControl: true,
+        gps: cordiOstrava,
         zoomControlOptions: {
             position: google.maps.ControlPosition.RIGHT_CENTER
         },
         center: cordiOstrava,
+        //location: cordiOstrava,
         styles: [
             {
                 "stylers": [
@@ -56,10 +58,12 @@ function initMap() {
         draggable: false,
         disableDefaultUI: true,
         zoomControl: true,
+        gps: cordiOstrava,
         zoomControlOptions: {
             position: google.maps.ControlPosition.RIGHT_CENTER
         },
         center: cordiBrno,
+        //location: cordiOstrava,
         styles: [
             {
                 "stylers": [
@@ -124,7 +128,8 @@ function initMap() {
             position: cordiBrno,
             map: mapBrno,
             icon: 'img/meMAPicon.png',
-            title: 'Modern Enterpreneur'
+            title: 'Modern Enterpreneur',
+            url: 'https://www.google.com/maps/place/Bohunick%C3%A1+595%2F85,+619+00+Brno-jih-Horn%C3%AD+Her%C5%A1pice,+%C4%8Cesk%C3%A1+republika/@49.1635193,16.5918762,17z/data=!3m1!4b1!4m2!3m1!1s0x4712959e58d2ef2d:0xe9632ef2e15a9d36?hl=cs-CZ'
         });
     }
     else {

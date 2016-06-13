@@ -20,6 +20,25 @@
       height: 50px;
       transition: .6s;
     }
+    .logo-link {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      display: inline-block;
+      height: 50px;
+      width: 172px;
+      z-index: 999;
+      transition: all .7s;
+    }
+    .logo-link:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
     #nav {
       position: absolute; //fixed;
       top: 20px;
@@ -45,7 +64,7 @@
           user-select: none;
           width: 40px;
           height: 32px;
-          transition: all 3s;
+          //transition: all 3s;
 
           .menuRes1, .menuRes2, .menuRes3, .menuRes4 {
             position: absolute;
@@ -64,20 +83,21 @@
           .menuRes4 {
             top: 23px;
           }
-          &:hover {
+          /*&:hover {
             background: #6fbc00;
-          }
+          }*/
         }
         input[type=checkbox] {
           display: none !important;
           opacity: 0;
         }
         ul {
+          position: fixed;
           background: rgba(0, 0, 0, 0.9);
           border-radius: 0;
           width: 100vw;
           height: 100vh;
-          margin-left: calc(~"-100vw + 55px");
+          //margin-left: calc(~"-100vw + 55px");
           top: -300px;
 
           .active {
@@ -88,7 +108,7 @@
           li {
             display: block;
             margin: 10px auto;
-            width: 200px;
+            width: 300px;
             text-align: center;
 
             /* animation, set up delay, opacity for list and fading for link*/
@@ -130,7 +150,7 @@
             }
 
             a {
-              font-size: 20px;
+              font-size: 28px;
               margin-left: 20%;
               transition: margin 1s;
               padding-bottom: 5px;
@@ -150,24 +170,31 @@
         }
         /*  Opacity and margin for animate menu - fade in from right */
         input[type=checkbox]:checked {
-          ~ #dropdown li {
-            opacity: 1;
-            &:first-child {
-              margin-top: calc(~"38.2vh - 80px");
-            }
-            a {
-              margin-left: 0;
+          ~ #dropdown{
+            top: 0;
+            margin-left: 0;
+            li{
+              opacity: 1;
+              &:first-child {
+                margin-top: calc(~"38.2vh - 80px");
+              }
+              a {
+                margin-left: 0;
+              }
             }
           }
         }
-        input[type=checkbox]:checked {
+/*        input[type=checkbox]:checked {
           ~ #dropdown {
             top: -20px;
           }
-        }
+        }*/
         /*  Hambuger menu  */
         input[type="checkbox"]:checked ~ label {
-          background: #6fbc00;
+          position: fixed;
+          top: 20px;
+          right: 15px;
+          //background: #6fbc00;
           .menuRes1, .menuRes4 {
             top: 15px;
             opacity: 0;
@@ -249,6 +276,18 @@
     }
   }
   @media only screen and (min-width: 480px) and (min-height: 50px) {
+    .head-content #nav{
+      .dropdown-main {
+        ul {
+          li {
+            a {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+
     .content {
       margin-top: 0;
       h1 {
@@ -283,6 +322,18 @@
     }
   }
   @media only screen and (min-width: 545px) {
+    .head-content #nav{
+      .dropdown-main {
+        ul {
+          li {
+            a {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+
     .content{
       margin-top: 10px;
     }
@@ -291,6 +342,18 @@
     }
   }
   @media only screen and (min-width: 620px) {
+    .head-content #nav{
+      .dropdown-main {
+        ul {
+          li {
+            a {
+              font-size: 34px;
+            }
+          }
+        }
+      }
+    }
+
     .content{
       margin-top: 15px;
     }
@@ -320,9 +383,17 @@
         .logo {
           height: 60px;
         }
+        .logo-link {
+          position: fixed;
+          top: 15px;
+          left: 15px;
+          display: inline-block;
+          width: 205px;
+          height: 60px;
+        }
         #nav {
           top: 30px;
-          position: absolute;
+          position: fixed;
           right: 15px;
           width: auto;
 
@@ -337,6 +408,7 @@
               }
             }
             ul {
+              position: relative;
               top: 0;
               visibility: visible;
               opacity: 1;
@@ -378,8 +450,12 @@
               }
             }
           }
+          input[type=checkbox]:checked~#dropdown li:first-child{
+            margin-top: 0;
+          }
         }
       }
+
 
       .bg-scrollMenu {
         position: fixed;
@@ -414,6 +490,13 @@
           top: 5px;
           left: 10px;
           height: 40px;
+        }
+        .logo-link {
+          position: fixed;
+          top: 5px;
+          left: 10px;
+          height: 40px;
+          width: 137px;
         }
       }
       input[type=checkbox]:checked ~ #dropdown {
@@ -457,7 +540,6 @@
             margin-left: 60px;
           }
           #dropdown {
-
             li {
               margin-left: 60px;
             }
@@ -471,6 +553,15 @@
           z-index: 999;
           transition: all .7s;
         }
+        .logo-link {
+          top: 26px;
+          width: 240px;
+          height: 70px;
+          z-index: 999;
+          transition: all .7s;
+        }
+
+
       }
 
       .content {
@@ -502,6 +593,15 @@
           height: 40px;
           z-index: 999;
         }
+        .logo-link {
+          position: fixed;
+          top: 5px;
+          left: auto;
+          height: 40px;
+          width: 137px;
+          z-index: 999;
+          transition: all .7s;
+        }
         #nav {
           top: 0;
           #dropdown {
@@ -526,7 +626,8 @@
             margin-left: 80px;
           }
         }
-        .logo {
+        .logo-link {
+          position: fixed;
           left: auto;
         }
       }
